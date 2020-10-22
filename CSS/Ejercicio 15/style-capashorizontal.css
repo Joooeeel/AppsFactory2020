@@ -1,0 +1,150 @@
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    margin-left: 15px;
+    
+}
+
+.container{
+    margin: auto;
+    background-color: black;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+}
+
+.col-left{
+    width: 100px;
+    height: 100%;
+    background-color: red;
+}
+
+.col-mid{
+    width: 800px;
+    height: 100%;
+    background-color: rosybrown;
+}
+
+    .top{
+        width: 100%;
+        height: 100px;
+        background-color: orange;
+    }
+
+    .mid{
+        width: 100%;
+        height: 400px;
+        background-color: blue;
+    }
+
+    .bot{
+        width: 100%;
+        height: 100px;
+        background-color: purple;
+    }
+    
+
+.col-right{
+    width: 100px;
+    height: 100%;
+    background-color: green;
+}
+
+/*-----DISPLAY IN-LINE BLOCK------*/
+
+.container-2{
+    margin: auto;
+    background-color: black;
+    width: 1000px;
+    height: 600px;
+    display: block;
+}
+
+.col-left-2{
+    width: 100px;
+    height: 100%;
+    background-color: red;
+    display: inline-block;
+}
+
+.col-mid-2{
+    width: 800px;
+    height: 100%;
+    background-color: rosybrown;
+    display: inline-block;
+}
+
+    .top-2{
+        width: 100%;
+        height: 100px;
+        background-color: orange;
+    }
+
+    .mid-2{
+        width: 100%;
+        height: 400px;
+        background-color: blue;
+    }
+
+    .bot-2{
+        width: 100%;
+        height: 100px;
+        background-color: purple;
+    }
+
+.col-right-2{
+    width: 100px;
+    height: 100%;
+    background-color: green;
+    display: inline-block;
+}
+
+/*-----DISPLAY FLOAT:LEFT (FER) ------*/
+
+.container-2{
+    margin: auto;
+    background-color: black;
+    width: 1000px;
+    height: 600px;
+    display: block;
+}
+
+.col-left-2{
+    width: 100px;
+    height: 100%;
+    background-color: red;
+    display: inline-block;
+}
+
+.col-mid-2{
+    width: 800px;
+    height: 100%;
+    background-color: rosybrown;
+    display: inline-block;
+}
+
+    .top-2{
+        width: 100%;
+        height: 100px;
+        background-color: orange;
+    }
+
+    .mid-2{
+        width: 100%;
+        height: 400px;
+        background-color: blue;
+    }
+
+    .bot-2{
+        width: 100%;
+        height: 100px;
+        background-color: purple;
+    }
+
+.col-right-2{
+    width: 100px;
+    height: 100%;
+    background-color: green;
+    display: inline-block;
+}

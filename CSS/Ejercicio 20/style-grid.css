@@ -1,0 +1,19 @@
+.container{
+    width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width: 75px;
+}
+

@@ -1,0 +1,69 @@
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(212, 212, 212);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+
+.top{
+    border: rgb(88, 54, 22) 2px solid;
+    background-color: rgb(194, 124, 58);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container{
+    height: 400px;
+    position: relative;
+    background-color: brown;
+        
+}
+
+.int{
+    width: 50%; height: 50%;
+    position: absolute; 
+}
+
+.int p{
+    padding-left: 10px;
+}
+
+    .int:hover{
+        z-index: 9999;
+    }
+
+.int1{
+    background-color: rgb(207, 205, 59);
+    border: 2px solid rgb(105, 104, 33);
+}
+
+.int2{
+    background-color: rgb(50, 209, 221);
+    border: 2px solid rgb(22, 98, 104);
+    left: 50%;
+}
+
+.int3{
+    background-color: rgb(26, 179, 64);
+    border: 2px solid rgb(12, 92, 32);
+    top: 50%;
+}
+
+.int4{
+    background-color: plum;
+    border: 2px solid rgb(83, 61, 83);
+    top: 50%; left: 50%;
+}
+
+.int5{
+    background-color: salmon;
+    border: 2px solid rgb(116, 60, 54);
+    top: 25%; left: 25%;
+}

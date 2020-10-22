@@ -1,0 +1,17 @@
+div{
+    border-width: 40px;
+    padding: 20px;
+    border-style: solid;
+}
+
+#world{
+    border-image: url(./img/mundo\ \(1\).svg);
+}
+
+#stretch{
+    border-image: url(./img/border.png) 30 30 stretch; 
+}
+
+#round{
+    border-image: url(./img/border.png) 30 30 round;
+}

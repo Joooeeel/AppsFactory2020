@@ -1,0 +1,94 @@
+body{
+    background-image: url(./img/bg.gif);
+}
+
+.container{
+    width: 965px;
+    border-radius: 20px;
+    background-color:whitesmoke;
+    margin: auto;
+}
+/******************TOP********************************/
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+    .top ul{
+        list-style: none; 
+        margin-top: 30px;   
+    }
+
+        .top ul li{
+            display: inline-block;
+        }
+
+            .top ul li a{
+                text-decoration: none;
+                color: black;
+                padding: 15px;
+
+            }
+
+/***********************CONTENT******************************/
+h1{
+    text-align: center;
+    margin-top: 35px;
+}
+
+h2{
+    color: rgb(151, 0, 0);
+}
+
+.middle{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+        
+}
+
+
+    .box{
+        width: 265px;
+        margin-left: 10px;
+    }
+
+/*******************************FOOTER*******************************/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 25px 0px;
+}
+
+    .footer ul{
+        list-style: none;    
+    }
+
+        .footer ul li{
+            display: inline-block;
+        }
+
+            .footer ul li a{
+                text-decoration: none;
+                color: black;
+                padding: 15px;
+
+            }
+    
+    .footer .cibernium{
+        text-decoration: none;
+        color: black;
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+/******************HOVER*********************/
+
+ul > li a:hover{
+    background-color: rgb(129, 13, 37);
+}
+
+ul li:first-child a{
+    background-color: rgb(129, 13, 37);
+}

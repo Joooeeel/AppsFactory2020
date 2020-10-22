@@ -1,0 +1,61 @@
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+    /*letter-spacing: 5px;
+    font-size: 4rem;*/
+}
+
+body{
+    background-color: rgb(155, 149, 133);
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+h1{
+    text-align: right;
+    letter-spacing: 40px;
+    font-size: 4rem;
+    color: blue;
+}
+
+h2{
+    text-align: left;
+    background-color:  rgb(116, 111, 100);
+    color: white;
+    font-weight: bold;
+    margin-top: 0px;
+    padding: 5px 0px 5px 0px;
+}
+
+.last{
+    margin-top: 10px;
+}
+
+.container{
+    width: 1024px;
+    margin: auto;
+}
+
+.articulo{
+    overflow: hidden;
+}
+
+.block{
+    display: block;
+    margin: auto;
+}
+
+.bold-italic{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.img-left{
+    float: left;
+    margin-right: 20px;
+}
+
+.img-right{
+    float: right;
+    margin-left: 20px;
+}

@@ -1,0 +1,35 @@
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+span{
+    margin-left: 100px;
+    font-size: 4rem;
+    text-align: center;
+}
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2.5px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.hola{
+
+    text-shadow: 60px 60px 2px green, 
+    -60px -60px 2px blue, 
+    -60px 60px 2px brown, 
+    60px -60px 2px orange;;
+    transition: 1s;
+}
+
+    .hola:hover{
+    text-shadow: -60px 60px 2px orange, 
+    60px 60px 2px red, 
+    60px -60px 2px green, 
+    -60px -60px 2px blue
+    }

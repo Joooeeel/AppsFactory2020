@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+    ul li{
+        margin: 10px;
+    }
+
+a{
+    padding: 25px;
+    background-image: url(http://pablomonteserin.com/termine/statics/images/deadpool.png), 
+    linear-gradient(to bottom, #da01bd 0%,#00ff15 100%);
+    display: block;
+    /*T E X T*/
+    text-decoration: none;
+    color: white;
+    font-family: 'Rubik Mono One', sans-serif;;
+    /*B O R D E R*/
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    border-radius: 20px;
+    /*T R A N S I T I O N*/
+    transition: 1s;
+}
+
+    a:hover{
+        background-position: -50px center;
+    }

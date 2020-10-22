@@ -1,0 +1,12 @@
+.bg{
+   background-image: url(./img/bg.jpg);
+   width: 750px;
+   height: 570px;
+   margin: auto;
+   display: flex; 
+}
+
+.column{
+    width: 240px;
+    padding:20px;
+}

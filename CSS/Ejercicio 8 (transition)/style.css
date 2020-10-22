@@ -1,0 +1,31 @@
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+.first{
+    width: 500px;
+    background-color: pink;
+    float: left;
+}
+
+    .first:hover{
+        background-color: black;
+    }
+
+.second{
+    width: 500px;
+    background-color: pink;
+    float: left;
+    /*T R A N S I T I O N S salida*/
+    transition: 3s;
+}
+
+    .second:hover{
+        background-color: black;
+        /*T R A N S I T I O N S entrada*/
+        transition: 1s;
+    }

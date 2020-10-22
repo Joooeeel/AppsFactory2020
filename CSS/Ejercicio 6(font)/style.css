@@ -1,0 +1,17 @@
+@font-face{
+    font-family: myFont;
+    src: url(./resource/fuente.ttf);
+}
+
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+}
+
+.mine{
+    font-family: myFont;
+}
+
+i{
+    font-size: 6rem;
+    color: yellowgreen;
+}

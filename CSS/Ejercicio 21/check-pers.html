@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type="checkbox"]{
+            display: none;
+        }
+
+        input[type="checkbox"] + label{
+            display: inline-block;
+            background-image: url(./img/check_radio_sheet.png);
+            width: 19px;
+            height: 19px;
+        }
+
+        input[type="checkbox"]:checked + label{
+            background-image: url(./img/check_radio_sheet.png);
+            background-repeat: no-repeat;
+            background-position: -19px 0px;
+        }
+
+        div{
+            width: 20px;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Personalización checkbox</h1>
+    
+    <div class="boton">
+    <input type="checkbox" id="pers">
+    <label for="pers"></label>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+.google{
+    font-family: 'Fjalla One', sans-serif;;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    margin-left: 15px;
+    
+}
+
+.container{
+    width: 1250px;
+    background-color: salmon;
+    position: relative;
+    left: 25px;
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    ul a{
+        border-color: springgreen;
+        border-width: 20px;
+        padding: 20px
+    }

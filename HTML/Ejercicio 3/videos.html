@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+</head>
+<body>
+    <h1>Inserción de videos HTML</h1>
+
+    <h3>Forma común nueva</h3>
+
+    <video src="./leon.mp4" controls="controls" width="400" height="300" poster="./leon.jpg" preload="preload" autoplay>
+        Tu navegador no soporta HTML5.
+    </video>
+
+    <h3>Forma común antigua</h3>
+
+    <video poster="./leon.jpg" controls="controls" width="400" height="300" loop="loop" preload="preload" autoplay>
+        <source src="leon.mp4" type="video/mp4"/>
+        <source src="leon.ogv" type="video/ogg"/>
+        <source src="./leon.webm" type="video/webm"/>
+
+        Tu navegador no soporta HTML5.
+    </video>
+
+    <h2>INSERTANDO MÚSICA</h2>
+
+    <audio src="./Musica/HakunaMatataItMeansNoWorries.mp3" controls="controls" autoplay preload="preload" loop="loop">
+        Not HTML5 Supported
+    </audio>
+
+    <audio controls="controls" autoplay preload="preload" loop="loop">
+        <source src="./Musica/HakunaMatataItMeansNoWorries.mp3" type="audio/mp3">
+        <source src="./Musica/HakunaMatataItMeansNoWorries.wav" type="audio/wav">
+        Not HTML5 Supported
+    </audio>
+</body>
+</html>
