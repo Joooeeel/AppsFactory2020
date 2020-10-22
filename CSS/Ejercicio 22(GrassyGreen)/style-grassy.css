@@ -1,0 +1,73 @@
+@font-face{
+    font-family: holis;
+    src: url(./rsc/fuente.woff);
+}
+
+body{
+    margin: 0;
+    font-family: holis;
+}
+/*************HEADER**********************/
+.head{
+    background-color: rgba(22, 160, 133, 0.7);
+    width: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+.title{
+    background-color: #333333;
+    width: 100%;
+    margin: 0px;
+    padding: 160px;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1{
+    color: white;
+    font-size: 5em;
+    font-weight: lighter;
+    margin-bottom: 0px;
+    
+}
+
+h2{
+    color: white;
+    font-size: 16px;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+.menu{
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+}
+
+    .menu li{
+        display: inline-block;
+    }
+
+        .menu li a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin: 0px 50px 0px 50px;
+            padding: 25px;
+        }
+
+
+.grass{
+    background-image: url(./img/pic01.jpg);
+    height: 600px;
+    background-repeat: repeat;
+    
+}
+
+/************MENU HOVER****************/
+
+.menu li a:hover{
+    background-color: rgba(92, 179, 161, 0.8);
+}
