@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+
+    <link rel="stylesheet" href="./style-formulario.css">
+</head>
+<body>
+    <h1>Validation from HTML</h1>
+
+    <label for="Name">Nombre: </label>
+    <input type="text" name="Name" id="Name" required="required" autofocus>
+    <img src="./img/success.png" alt="">
+    <br><br>
+    <label for="Age">Edad:</label>
+    <input type="number" name="age" id="age" min="0" max="100" required="required">
+    <img src="./img/success.png" alt="">
+    <br><br>
+    <label for="cp">Codigo Postal:</label>
+    <input type="text"  title="Introduzca 5 digitos" id="cp" pattern="^[0-9]{5}$" required="required">
+    <img src="./img/success.png" alt="">
+    <br><br>
+    <label for="mail">E-mail:</label>
+    <input type="email" name="mail" id="mail" required="required">
+    <img src="./img/success.png" alt="">
+    <br><br>
+    <label for="datetime">Fecha reserva</label>
+    <input type="date" name="reservation" id="datetime" required="required">
+    <img src="./img/success.png" alt="">
+    <br><br>
+    <label for="note">Nota:</label>
+    <input type="range" name="note" id="note" max="10" min="0" value="7" step="1" required="required">
+    <img src="./img/success.png" alt="">
+    <br><br>
+    <input type="submit" value="Submit">
+
+</body>
+</html>
