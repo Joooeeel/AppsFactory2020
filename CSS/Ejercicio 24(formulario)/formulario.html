@@ -11,27 +11,27 @@
     <h1>Validation from HTML</h1>
 
     <label for="Name">Nombre: </label>
-    <input type="text" name="Name" id="Name" required="required" autofocus>
+    <input type="text" name="Name" id="Name" required="required" title="Rellena el campo correctamente" autofocus>
     <img src="./img/success.png" alt="">
     <br><br>
     <label for="Age">Edad:</label>
-    <input type="number" name="age" id="age" min="0" max="100" required="required">
+    <input type="number" name="age" id="age" min="0" max="100" title="Rellena el campo correctamente" required="required">
     <img src="./img/success.png" alt="">
     <br><br>
     <label for="cp">Codigo Postal:</label>
-    <input type="text"  title="Introduzca 5 digitos" id="cp" pattern="^[0-9]{5}$" required="required">
+    <input type="text"  title="Introduzca 5 digitos" id="cp" pattern="^[0-9]{5}$" title="Rellena el campo correctamente" required="required">
     <img src="./img/success.png" alt="">
     <br><br>
     <label for="mail">E-mail:</label>
-    <input type="email" name="mail" id="mail" required="required">
+    <input type="email" name="mail" id="mail" title="Rellena el campo correctamente" required="required">
     <img src="./img/success.png" alt="">
     <br><br>
     <label for="datetime">Fecha reserva</label>
-    <input type="date" name="reservation" id="datetime" required="required">
+    <input type="date" name="reservation" id="datetime" title="Rellena el campo correctamente" required="required">
     <img src="./img/success.png" alt="">
     <br><br>
     <label for="note">Nota:</label>
-    <input type="range" name="note" id="note" max="10" min="0" value="7" step="1" required="required">
+    <input type="range" name="note" id="note" max="10" min="0" value="7" step="1" title="Rellena el campo correctamente" required="required">
     <img src="./img/success.png" alt="">
     <br><br>
     <input type="submit" value="Submit">
