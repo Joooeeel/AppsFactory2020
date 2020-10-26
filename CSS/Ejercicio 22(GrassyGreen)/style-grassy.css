@@ -33,7 +33,7 @@ h1{
     
 }
 
-h2{
+.title h2{
     color: white;
     font-size: 16px;
     font-weight: lighter;
@@ -61,7 +61,7 @@ h2{
 
 .grass{
     background-image: url(./img/pic01.jpg);
-    height: 600px;
+    height: 460px;
     background-repeat: repeat;
     
 }
@@ -71,3 +71,158 @@ h2{
 .menu li a:hover{
     background-color: rgba(92, 179, 161, 0.8);
 }
+
+/********* BODY ******************/
+
+.body-box{
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+}
+
+    .body-box .notice{
+        width: 650px;
+        margin-bottom: 80px;
+        
+    }
+
+        .body-box .notice h2{
+            color: #16A085;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+
+        .body-box .notice h3{
+            color:black;
+            font-size: 0.7em;
+            font-weight: lighter;
+            margin: 0px;
+        }
+
+        .body-box .notice p{
+            text-align: justify;
+            color: black;
+            font-weight: bold;
+        }
+    
+    .body-box .link-list{
+        width: 325px;  
+    }
+
+        .body-box .link-list h2{
+            color: black;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-top: 0px;
+            margin-bottom: 35px;
+        }
+
+        /******LISTA*****/
+        .link-list ul{
+            list-style: none;
+            padding: 0px;
+            margin-top: 20px;
+        }
+
+            .link-list ul li{
+                display: block;
+                margin-left: 0px;
+                margin-bottom: 20px;   
+            }
+
+                .link-list ul li a{
+                    color: black;
+                    text-decoration: underline;
+                    font-size: 17px;
+                    font-weight: bold;
+
+                }
+
+/**********BOTTOM***********/
+
+/*******SOCIAL******/
+
+.full-social{
+    background-color: #333333;
+    width: 100%;
+    margin: 0px;   
+    display: block;
+    box-sizing: border-box;
+}
+
+    .social{
+        width: 1024px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .social ul{
+        list-style: none;
+        padding: 0px;
+        margin-top: 20px;
+    }
+
+        .social ul li{
+            display: block;
+            margin-left: 0px;
+            margin-bottom: 20px;   
+        }
+
+            .social ul li a{
+                color: rgb(17, 12, 37);
+                text-decoration: underline;
+                font-size: 17px;
+                font-weight: bold;
+
+            }
+
+        .social div h2{
+            color: white;
+        }
+
+        .social div p{
+            color: white;
+            font-weight: bold;
+            text-align: justify;
+        }
+
+    .img{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .img li{
+            display: inline-block;
+            margin-right: 28px;
+        }
+
+            .img li a{
+                display: block;
+                box-sizing: border-box;
+                padding: 0px;
+            }
+
+/**********FOOOTEER****************/
+    .footer{
+        background-color: #16A085;
+        padding: 90px;
+        text-align: center;
+    }
+
+    .footer p{
+        color: white;
+    }
+
+        
+
+    
