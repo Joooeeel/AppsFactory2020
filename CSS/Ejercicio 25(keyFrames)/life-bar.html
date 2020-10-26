@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeBar</title>
+
+    <style>
+        .cont{
+            width: 600px;
+            height: 50px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .bar{
+            background-color: green;
+            height: 100%;
+            position: absolute;
+            animation: lifeBar 2s forwards;
+        }
+
+        #red{
+            background-color: red;
+            animation: lifeBarHeart 2s forwards;
+        }
+
+        .heart{
+            background-image: url(./img/corazon-mask.png);
+            background-size: auto 100%;
+            height: 100%; width: 100%;
+            position: absolute;
+
+        }
+
+        @keyframes lifeBar {
+            from{
+                width: 0%;
+            }
+            to{
+                width: 75%;
+            }
+        }
+
+        @keyframes lifeBarHeart {
+            from{
+                width: 0%;
+            }
+            to{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>LifeBar animation</h1>
+    <div class="cont">
+        <div class="bar"></div>
+    </div>
+    <br><br><br>
+    <div class="cont">
+        <div class="bar" id="red">
+            <div class="heart"></div>
+        </div>
+    </div>
+</body>
+</html>
