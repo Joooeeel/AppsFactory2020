@@ -1,0 +1,174 @@
+@font-face{
+    font-family: robot;
+    src: url(./rsc/Roboto-Thin.ttf);
+}
+
+.wrapper{
+    background: white;
+}
+
+/*********** BACKGROUND *************/
+
+body{
+    background-image: url(./img/header.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: robot;
+    margin: 0px;
+    color: #797979;
+}
+
+/************ MENU ********************/
+
+.head{
+    background-color: rgba(0, 0, 0, .2);
+    width: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: fixed;
+    margin: 0px;
+    top: 0px;
+}
+
+.menu{
+    margin: 0px;
+    list-style: none;
+    display: inline-block;
+}
+
+    .menu li{
+        display: inline-block;
+        padding: 25px;
+        border-right: 1px solid #749591;
+    }
+
+    .menu li:last-child{
+        border: 0px;
+    }
+
+        .menu li a{
+            margin: 0px;
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;          
+        }
+
+/************ BODY *************/
+
+.grey{
+    background-color: #F2F2F2;
+    width: 100%;
+    display: block;
+    margin-top: 550px;
+}
+
+.top{
+    width: 1024px;
+    margin: auto;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0px;
+
+}
+
+    .top p{
+        font-size: .9 em;
+        text-align: center;
+        border-bottom: 3px solid #BCBCBC;
+        padding-bottom: 40px;
+        margin: 35px 15px 0px 15px;
+    }
+
+.cont{
+    width: 1250px;
+    margin: auto;
+    display: flex;
+    padding-bottom: 50px;
+}
+
+    .cont div{
+        width: 400px;
+        margin: 40px 20px 0px 80px;
+        text-align: center;
+    }
+
+        .cont div a{
+            display: block;
+            color: white;
+            background-color: #72AC80;
+            text-decoration: none;
+            margin-top: 30px;
+            padding: 10px 100px 10px 100px;
+        }
+
+.white{
+    background-color: white;
+    width: 100%;
+}
+
+    .cont2{
+        width: 1024px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+        .cont2 .art{
+            width: 500px;
+            /*margin-right: 12px;*/
+            margin-bottom: 40px;
+            box-sizing: border-box;
+        }
+
+            .cont2 .art img{
+                width: 500px;
+            }
+
+            .cont2 .art h3{
+                margin: 0px;
+            }
+
+            .cont2 .art p{
+                margin: 0px;
+            }
+
+.foot{
+    width: 1024px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding: 100px;
+    font-size: 1.5em;
+    color: white;
+}
+
+/************FOOTEER***************/
+
+.foot2{
+    background-color: black;
+    width: 100%;
+    
+}
+
+.foot_in{
+    width: 1024px;
+    margin: auto;
+    text-align: center;
+}
+
+    .foot_in h2{
+        color: white;
+        padding: 80px;
+        text-align: center;
+    }
+
+    .foot_in p{
+        color: #FFFFFF;
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
