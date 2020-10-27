@@ -3,11 +3,8 @@
     src: url(./rsc/FontsFree-Net-SFProText-Regular.ttf);
 }
 
-*{
-    font-family: 'SFPROText';
-}
-
 body{
+    font-family: 'SFPROText';
     margin: 0px;
 }
 /************************************ NAV BAR *****************************************/
@@ -63,7 +60,6 @@ nav{
 }
 
 .img_top{
-    
     background-image: url(./img/hero__dvsxv8smkkgi_largetall_2x.jpg);
     min-height: 650px;
     background-size: 1200px auto;
@@ -92,9 +88,99 @@ nav{
        margin: 7px 0px 0px 0px; 
     }
 
-    .img_top a{
+    .enlaces_ves a{
         margin: 0px 30px 0px 30px;
         color:#1e89ff;
         font-size: 1rem;
         text-decoration: none;
+    }
+
+/**************** WHITE IMAGE ****************/
+
+.white_img{
+    background-image: url(./img/hero__dvsxv8smkkgi_largetall_2x0.jpg);
+    min-height: 650px;
+    background-size: 2300px auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: #fafafa;
+    padding-top: 15px;
+    
+    text-align: center;
+    color: black;
+}
+    .white_img h2{
+        font-size: 3rem;
+        margin-bottom: 0px;
+    }
+
+    .white_img #p1{
+        font-size: 1.5rem;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .white_img #p2{
+        font-size: 1rem;
+        opacity: 0.7;
+        margin: 7px 0px 0px 0px; 
+    }
+
+/******************BLACK IMAGE*************************/
+.img_black{
+    background-image: url(./img/hero__dvsxv8smkkgi_largetall_2x1.jpg);
+    min-height: 650px;
+    background-size: 3000px auto;
+    background-repeat: no-repeat;
+    background-position: center 70px;
+    background-color: black;
+    padding-top: 15px;
+    
+    text-align: center;
+    color: white;
+}
+
+    .img_black h2{
+        font-size: 3rem;
+        margin-bottom: 0px;
+    }
+
+    .img_black #p1{
+        font-size: 1.5rem;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .img_black #p2{
+       font-size: 1rem;
+       opacity: 0.7;
+       margin: 7px 0px 0px 0px; 
+    }
+
+/*****************CELDAS*******************/
+
+.cells{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+
+    .cells > div{
+        height:500px;
+        background-position:center center;
+        background-size:cover
+    }
+
+    .cell1{
+        background-image: url('./img/tile__cauwwcyyn9hy_large_2x1.jpg');
+        color: black;
+    }
+
+    .cell1 #p1{
+        font-size: 1.5rem;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .cell1 #p2{
+       font-size: 1rem;
+       opacity: 0.7;
+       margin: 7px 0px 0px 0px; 
     }
