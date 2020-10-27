@@ -1,0 +1,55 @@
+@font-face{
+    font-family: 'SFPROText';
+    src: url(./rsc/FontsFree-Net-SFProText-Regular.ttf);
+}
+
+*{
+    font-family: 'SFPROText';
+}
+body{
+    margin: 0px;
+}
+
+.icono{
+    width: 20px; height: 20px;
+    background-size: 230% 230%;
+    display: block;
+    background-position: -13px -11px;
+    background-repeat: no-repeat;
+}
+
+    .apple{
+        background-image: url(./img/globalnav_apple_image__cxwwnrj0urau_large.svg);
+    }
+
+    .search{
+        background-image: url(./img/globalnav_search_image__fca9mfoh8a2q_large.svg);
+        background-position: -33px -9px;
+        background-size: 410% 410%;
+    }
+
+    .bag{
+        background-image: url(./img/globalnav_bag_image__bmix8075eg4i_large.svg);
+    }
+
+nav{
+    background-color: black;
+    padding: 15px;
+}
+
+    nav ul{
+        margin: 0px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+        nav ul li{
+            /*margin: 0px 37px;*/
+        }
+
+            nav ul li a{
+                text-decoration: none;
+                color: white;
+                margin: 0px 37px 0px 37px;
+            }
