@@ -6,10 +6,11 @@
 *{
     font-family: 'SFPROText';
 }
+
 body{
     margin: 0px;
 }
-
+/************************************ NAV BAR *****************************************/
 .icono{
     width: 20px; height: 20px;
     background-size: 230% 230%;
@@ -53,3 +54,47 @@ nav{
                 color: white;
                 margin: 0px 37px 0px 37px;
             }
+
+/******************** BODY ********************/
+
+.p_top{
+    font-size: .8rem;
+    text-align: center;
+}
+
+.img_top{
+    
+    background-image: url(./img/hero__dvsxv8smkkgi_largetall_2x.jpg);
+    min-height: 650px;
+    background-size: 1200px auto;
+    background-repeat: no-repeat;
+    background-position: center 70px;
+    background-color: #131313;
+    padding-top: 15px;
+    
+    text-align: center;
+    color: white;
+}
+
+    .img_top h2{
+        font-size: 3rem;
+        margin-bottom: 0px;
+    }
+
+    .img_top #p1{
+        font-size: 1.5rem;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .img_top #p2{
+       font-size: 1rem;
+       opacity: 0.7;
+       margin: 7px 0px 0px 0px; 
+    }
+
+    .img_top a{
+        margin: 0px 30px 0px 30px;
+        color:#1e89ff;
+        font-size: 1rem;
+        text-decoration: none;
+    }
