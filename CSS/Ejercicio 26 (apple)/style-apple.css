@@ -42,10 +42,6 @@ nav{
         justify-content: center;
     }
 
-        nav ul li{
-            /*margin: 0px 37px;*/
-        }
-
             nav ul li a{
                 text-decoration: none;
                 color: white;
@@ -161,6 +157,8 @@ nav{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
+    column-gap: 15px;
+    row-gap: 15px;
 }
 
     .cells > div{
@@ -168,7 +166,7 @@ nav{
         background-position:center center;
         background-size:cover
     }
-
+/************* CELL 1 *****************/
     .cell1{
         background-image: url('./img/tile__cauwwcyyn9hy_large_2x1.jpg');
         color: black;
@@ -183,4 +181,67 @@ nav{
        font-size: 1rem;
        opacity: 0.7;
        margin: 7px 0px 0px 0px; 
+    }
+
+/************* CELL 2 *****************/
+
+    .cell2{
+        background-image: url('./img/tile__cauwwcyyn9hy_large_2x0.jpg');
+        color: white;
+    }
+
+    .cell2 h2{
+        font-size: 3rem;
+        margin-bottom: 0px;
+    }
+    .cell2 #p1{
+        font-size: 1.5rem;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .cell2 #p2{
+       font-size: 1rem;
+       opacity: 0.7;
+       margin: 7px 0px 0px 0px; 
+    }
+
+/************* CELL 3 *****************/
+
+    .cell3{
+        background-image: url('./img/tile__cauwwcyyn9hy_large_2x2.jpg');
+        color: white;
+    }
+        .cell3 h2{
+            font-size: 3rem;
+            margin-bottom: 5px;
+        }
+        .cell3 h2 img{
+            width: 100px;
+        }
+
+        .cell3 img{
+            width: 270px;
+        }
+
+    .cell3 #p1{
+        font-size: 1.5rem;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .cell3 #p2{
+       font-size: 1rem;
+       opacity: 0.7;
+       margin: 7px 0px 0px 0px; 
+    }
+
+/************ CELL 4 ****************/
+
+    .cell4{
+        background-image: url('./img/tile__cauwwcyyn9hy_large_2x.jpg');
+        color: black;
+    }
+
+    .cell4 h2{
+        font-size: 3rem;
+        margin-bottom: 5px;
     }
