@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    //ACABE Y MIRE COMO SE HACIA PARA ENTRAR DATOS
+    const n1 = prompt('Entra el n1');
+    const n2 = prompt('Entra el n2');
+    const op = prompt('Entra el operador');
+
+    let r;
+
+    if(op === '+'){
+        r = n1 + n2;
+    }else if(op === '-'){
+        r = n1 - n2;
+    }else if(op === '*'){
+        r = n1 * n2;
+    }else{
+        r = n1 / n2;
+    }
+    console.log(r);
+    alert('resultado: ' + r);
+</script>
+</html>
