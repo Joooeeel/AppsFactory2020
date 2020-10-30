@@ -12,7 +12,7 @@
 <script>
     
 
-
+    /*
     if (10 == 10){
         console.log("You got a true!");
     }else {
@@ -65,15 +65,28 @@
     const n2 = prompt('Entra el n2');
     const op = prompt('Entra el operador');
 
-    if(op == '+'){
-        console.log(n1 + n2);
-    }else if(op == '-'){
-        console.log(n1 - n2);
-    }else if(op == '*'){
-        console.log(n1 * n2);
+    let r;
+
+    if(op === '+'){
+        r = n1 + n2;
+    }else if(op === '-'){
+        r = n1 - n2;
+    }else if(op === '*'){
+        r = n1 * n2;
     }else{
-        console.log(n1 / n2);
+        r = n1 / n2;
     }
 
+    console.log(r);*/
+
+
+    /*********OPERADOR TERNARIO***************/
+
+    const b = 10;
+
+    console.log(b>0? 'positivo' : 'negativo');
+    console.log(b%2 == 0? 'par' : 'impar');
+
+    /********SWITCH*****************/
 </script>
 </html>
