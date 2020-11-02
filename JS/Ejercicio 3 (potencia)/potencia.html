@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    const base = prompt("Introduzca el numero");
+    const exp = prompt("Introduzca el exponente");
+    let rfa = 1;
+    let rfd = 1;
+
+    for(let i = 1; i <= exp; i++){
+        rfa = rfa * base;
+    }
+    console.log("Tu resultado en bucle for ascendentemente: " + rfa);
+
+    for(let i = exp; i > 0; i--){
+        rfd = rfd * base;
+    }
+    console.log("Tu resultado en bucle for descendentemente: " + rfd);
+    
+    let rwa = 1;
+    let rwd = 1;
+    let i = 1;
+    let j = exp;
+
+    while(i<= exp){
+        rwa = rwa * base;
+        i++;
+    }
+    console.log("Tu resultado en bucle while ascendete: " + rwa);
+
+    while(j > 0){
+        rwd = rwd * base;
+        j--;
+    }
+    console.log("Tu resultado en bucle while descendente: " + rwd);
+    
+</script>
+</html>
