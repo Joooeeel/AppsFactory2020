@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const cubo = num => {
+        console.log(num * num * num);
+    }
+
+    const ms = kmh => {
+        let vms = kmh*1000/3600;
+        console.log(vms);
+    }
+
+    const calculaSuperficie = (base, altura) =>{
+        console.log(base * altura);
+    }
+
+    const areaTriangulo = (base, altura) => {
+        console.log(base*altura/2);
+    }
+
+    const perCir = r => {
+        console.log(2 * Math.PI * r);
+    }
+
+    const aCir = r => {
+        console.log(Math.PI * (r * r));
+    }
+
+    cubo(3);
+    ms(120);
+    calculaSuperficie(8, 10);
+    areaTriangulo(6, 10);
+    const radius = 10;
+    perCir(radius);
+    aCir(radius);
+
+</script>
+</html>

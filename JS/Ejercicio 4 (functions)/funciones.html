@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function hoyQuieroComer(comida){
+        console.log('Hoy quiero comer ' + comida);
+    }
+
+    function cube(num){
+
+        let r = num;
+        for(let i = 1; i < 3; i++){
+            r = r * num;
+        }
+
+        console.log(r);
+    }
+
+    function kmh(ms){
+
+        let kh = ms*1000/3600;
+        console.log(kh);
+    }
+
+    function areaRectangulo(base, altura){
+        console.log('Area del rectangulo  ' + (base*altura));
+    }
+
+    function areaTriangulo(base, altura){
+        console.log('Area del triangulo  ' + (base*altura/2));
+    }
+
+    function calculaPerimetro(r){
+        console.log('Perimetro circumferencia ' + (2 * Math.PI * radius));
+    }
+    
+    function calculaArea(r){
+        console.log('Area circumferencia ' + (Math.PI * (r * r)));
+    }
+
+
+    hoyQuieroComer('garbanzos');
+    
+    const x = 4;//prompt('Entra un numero');
+    cube(x);
+
+    const v = 120;//prompt('Introduzca vel m/s');
+    kmh(v);
+
+    const br = 8;//prompt('Base');
+    const ar = 2;//prompt('Altura');
+    areaRectangulo(br, ar);
+
+    const bt = 10//prompt('Base');
+    const at = 18//prompt('Altura');
+    areaTriangulo(bt, at);
+
+    const radius = 3;
+    calculaPerimetro(radius);
+    calculaArea(radius);
+</script>
+</html>
