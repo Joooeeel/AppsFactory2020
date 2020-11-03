@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrio Sesamo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BARRIO SESAMO</h1>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">IMAGE GALLERY</a></li>
+                <li><a href="#">VIDEO GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cont">
+        <div class="art">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet, ad mazim referrentur pro, choro tibique ei eos. Mel no clita omittam suavitate, utinam dictas delectus eu eum. Sint adipisci duo ea. Te inani nullam ridens nec. Assum verear copiosae ad cum.</p>
+            <video src="./video/leon.mp4" type="video/mp4" preload="preload" controls></video>
+        </div>
+        <div class="art">
+            <h2>Title</h2>
+            <p>Ei hinc dicant dolorem mea. Usu porro clita ei, vel timeam prodesset ne. Alii elitr ex eum, te sea quis nostrum necessitatibus. Corpora vituperatoribus et eum. Enim eros detracto sit cu, tollit copiosae deterruisset eum ex, unum oratio repudiandae ex eum.</p>
+            <br><br>
+            <audio controls="controls" preload="preload">
+                <source src="./audio/HakunaMatataItMeansNoWorries.wav" type="audio/wav">
+                <source src="./audio/HakunaMatataItMeansNoWorries.mp3" type="audio/mp3">
+                <source src="./audio/HakunaMatataItMeansNoWorries.ogg" type="audio/ogg">
+            </audio>
+        </div>
+        <div class="art">
+            <label for="name">Nombre:</label>
+            <input type="text" placeholder="escriba su nombre" required="required" id="name">
+            <label for="age">Edad:</label>
+            <input type="number" value="18" id="age">
+            <label for="fan">Grado fanatismo de Bassio Sésamo:</label>
+            <input type="range"  value="18" id="fan">
+            <label for="mail">Email</label>
+            <input type="email" placeholder="ejemplo@ejemplo.com" id="mail" required>
+            <input type="button" id="btn" value="Generar gráfico" style="margin-top: 20px;">
+
+            <div class="canvas"></div>
+        </div>
+    </div>
+    <footer>
+        <p>
+            &copy; Copyright by Joel Medina
+        </p>
+    </footer>
+</body>
+</html>
