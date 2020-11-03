@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo codificacion de una calculadora que usa funciones para sus operaciones</h1>
+    <input type="text" id="num1">
+    <select id="operador">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2">
+    <input type="button" id="calculadora" value="Calcular">
+    <br><br>
+    <input type="text" id="result">
+</body>
+
+<script>
+    
+    const sum = (x, y) =>{
+        return x + y;
+    }
+    const res = (x, y) =>{
+        return x - y;
+    }
+    const mul = (x, y) =>{
+        return x * y;
+    }
+    const div = (x, y) =>{
+        return x / y;
+    }
+
+    const cal = _ =>{
+        const op = document.querySelector('#operador').value;
+        const n1 = parseInt(document.querySelector('#num1').value);
+        const n2 = parseInt(document.querySelector('#num2').value);
+        let r;
+
+        switch(op){
+            case '+':
+                r = sum(n1, n2);
+                break;
+            case '-':
+                r = res(n1, n2);
+                break;
+            case '*':
+                r = mul(n1, n2);
+                break;
+            case '/':
+                r = div(n1, n2);
+                break;
+        }
+
+        document.querySelector('#result').value = r;
+    }
+    document.querySelector('#calculadora').addEventListener('click', cal);
+</script>
+</html>

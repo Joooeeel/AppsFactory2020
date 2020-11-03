@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            width: 200px;
+            display: inline-block;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcul0 mediante funciones de un viaje</h1>
+    <label>Introduzca el número de noches</label>
+    <input type="text" id="night">
+    <select id="city">
+        <option value="oviedo">Oviedo</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="madrid">Madrid</option>
+        <option value="barcelona">Barcelona</option>
+    </select>
+    <input type="button" id="btn" value="Calcular coste">
+    <br><br>
+    <label>Coste hotel</label>
+    <input type="text" id="hotel">
+    <br>
+    <label>Coste viaje</label>
+    <input type="text" id="trip">
+    <br>
+    <label>Coste alquiler coche</label>
+    <input type="text" id="rentcar">
+    <br>
+    <label>Coste total</label>
+    <input type="text" id="total">
+</body>
+
+<script>
+
+    const calcular_coste = _ =>{
+        const num_night = document.querySelector('#night').value;
+        const city = document.querySelector('#city').value;
+
+        const ch = coste_hotel(num_night);
+        const ct = coste_avion(num_night, city);
+        const cc = coste_alquiler_coche(num_night);
+
+        document.querySelector('#hotel').value = ch;
+        document.querySelector('#trip').value = ct;
+        document.querySelector('#rentcar').value = cc;
+        document.querySelector('#total').value = ch + ct + cc;
+    }
+
+    const coste_hotel = n =>{
+        return n * 140;
+    }
+
+    const coste_avion = (n, c) =>{
+
+        let price = 0;
+
+        switch(c){
+            case 'oviedo':
+                price = 15 * n;
+                break;
+            case 'tokyo':
+                price = 400 * n;
+                break;
+            case 'madrid':
+                price = 90 * n;
+                break;
+            case 'barcelona':
+                price = 90 * n;
+                break;
+        }
+
+        
+        if(n > 3){
+            let discount = price * 0.1;
+            
+            price = price - discount;
+        }
+
+        return price;
+    }
+
+    const coste_alquiler_coche = n =>{
+        let price = 0;
+        price = n * 40;
+        
+        if(n >= 7){
+            price -= 50;
+        }else if(n >= 3){
+            price -= 20;
+        }
+
+        return price;
+    }
+
+    document.querySelector('#btn').addEventListener('click', calcular_coste);
+    
+</script>
+</html>
