@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Escribe tu nombre, por favor:
+        <input type="text" id="campoNombre">
+        <input type="button" id="btn" value="Enviar formulario">
+        <br>
+        <input type="text" id="campoNombre2">
+        <input type="text" id="campoNombre3">
+    </form>
+    
+    
+</body>
+
+<script>
+    const saludar = _ =>{
+        console.log(document.querySelector('#campoNombre').value);
+    }
+
+    const saludar2 = _ =>{
+		const info = document.querySelector('#campoNombre').value;
+		console.log(info);
+	}
+
+    const saludar3 = _ =>{
+		const info = document.querySelector('#campoNombre').value;
+		document.querySelector('#campoNombre2').value = info;
+	}
+
+    const saludar4 = _ =>{
+		document.querySelector('#campoNombre3').value = document.querySelector('#campoNombre').value;
+	}
+
+	
+
+    document.querySelector('#btn').addEventListener('click', saludar);
+    document.querySelector('#btn').addEventListener('click', saludar2);
+    document.querySelector('#btn').addEventListener('click', saludar3);
+    document.querySelector('#btn').addEventListener('click', saludar4);
+</script>
+</html>

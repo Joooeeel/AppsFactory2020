@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    
+    const rand = Math.floor(Math.random()*(7-5+1)) + 5;
+    console.log(rand);
+
+    let nombre = 'JoelMedina';
+    //let num = Math.floor(Math.random() * nombre.length);
+    let randc = nombre.length;
+    const num = Math.floor(Math.random() * (randc - 0 + 1) + 0);
+    
+    console.log(nombre.substring(num, num + 1));
+
+    const nombre2 = prompt('Introduzca su nombre caballero');
+    let number = Math.floor(Math.random() * (nombre2.length ));
+    alert(nombre2.substring(number, number + 1));
+</script>
+</html>
