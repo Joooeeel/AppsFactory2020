@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Cuales de los siguientes lenguajes son orientados a objetos: <span class="r1">Java</span>, VB6, <span class="r2">C++</span>,C, <span class="r3">C#</span>, Cobol ?</p>
+    <br>
+    <input type="button" id="boton1" value="ver resultado">
+</body>
+
+<script>
+    const correct = _ =>{
+        document.querySelector('.r1').style.backgroundColor = 'red';
+        document.querySelector('.r2').style.backgroundColor = 'red';
+        document.querySelector('.r3').style.backgroundColor = 'red';
+    }
+
+    document.querySelector('#boton1').addEventListener('click', correct);
+</script>
+</html>

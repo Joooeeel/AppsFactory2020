@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Value de una combo desplegable y pintamos la página</h1>
+    <form>
+        <select id="color">
+            <option selected="slected" value="white">Seleccione un color
+            </option>
+            <option value="green">Verde
+            </option>
+            <option value="red">Rojo
+            </option>
+            <option value="blue">Azul
+            </option>
+            <option value="pink">Rosa
+            </option>
+        </select>
+    </form>
+</body>
+
+<script>
+    const pintar = _ =>{
+        const selected = document.querySelector('#color').value;
+        document.querySelector('body').style.backgroundColor = selected;
+    }
+
+    document.querySelector('#color').addEventListener('change', pintar);
+</script>
+</html>

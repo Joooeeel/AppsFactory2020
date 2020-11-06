@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 200px; height: 200px;
+        }
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>innerHTML para cambiar int de capa</h1>
+
+    <div id="c1" class="box red"></div>
+    <div id="c2" class="box yellow"></div>
+</body>
+
+<script>
+    const addHTML = _ => {
+        document.querySelector('#c2').innerHTML = 'Has hecho hover sobre red'
+    }
+    const lessHTML = _ =>{
+        document.querySelector('#c2').innerHTML = ''
+    }
+    document.querySelector('#c1').addEventListener('mouseover', addHTML);
+    document.querySelector('#c1').addEventListener('mouseout', lessHTML);
+</script>
+</html>

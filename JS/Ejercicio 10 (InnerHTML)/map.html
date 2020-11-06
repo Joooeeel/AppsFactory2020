@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map{
+            background-image: url(./img/Bluemap.jpg);
+            width: 725px; height: 483px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        img{
+            width: 50px;
+            position: absolute;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <h1>Rutina Javascript que distribuye monedas aleatoriamente sobre un map</h1>
+    <div class="map" id="map">  
+    </div>
+</body>
+<script>
+
+    const init = _ =>{
+        let cns = "";
+
+        for(let i = 0; i < 10; i++){
+            let x = Math.floor(Math.random() * 700);
+            let y = Math.floor(Math.random() * 440);
+            cns += '<img src="./img/goldCoin.png" style="margin-left:' + x + 'px; margin-top:' + y + 'px">';
+        }
+
+        document.querySelector('#map').innerHTML = cns;
+    }
+
+    window.onload = init();
+</script>
+</html>
