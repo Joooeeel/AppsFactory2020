@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
-<body style="background-color:rgb(59, 59, 59)">
-    <h1 style="font-family: Arial, Helvetica, sans-serif; color: white;">Calcular la letra de tu DNI</h1>
+<body>
+    <h1>Calcular la letra de tu DNI</h1>
+
+    <p>Entra un numero de DNI (Sin la letra)</p>
+    <input type="text" id="enter">
+    <br><br>
+    <input type="button" value="Calcular" id="calcul">
+    <br><br>
+    <p>Tu letra del DNI és la siguiente: </p>
+    <input type="text" id="out">
 </body>
 
 <script>
 
+    const MIN = 0;
+    const MAX = 99999999;    
+
+
+    const calculator = dni =>{
+        
+        const letter = 'TRWAGMYFPDXBNJZSQVHLCKE';
+        let dni_value = "";
+        
+        if(dni > MIN && dni<MAX){
+            let num = dni%23;
+
+            dni_value = letter.charAt(num);
+        }
+
+        return dni_value;
+    }
+
+    const cal_let = _ =>{
+        const dni = document.querySelector('#enter').value;
+        const dni_let = calculator(dni);
+
+        if(dni_let != ""){
+            document.querySelector('#out').value = dni_let;
+        }else{
+            document.querySelector('#out').value = 'Numero erroneo';
+        }
+    }
+
+    document.querySelector('#calcul').addEventListener('click', cal_let);
 </script>
 </html>
