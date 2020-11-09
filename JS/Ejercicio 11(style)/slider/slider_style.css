@@ -1,0 +1,31 @@
+#cont{
+ width: 500px; height: 500px;
+ overflow: hidden;  
+}
+
+#slider_content{
+    width: 2000px;
+    height: 500px;
+    display: flex;
+    transition: 1s;
+}
+
+.photo{
+    width: 500px; height: 500px;
+}
+
+.p1{
+    background-image: url(./img/PinguLinux_Bob_Marley.png);
+}
+
+.p2{
+    background-image: url(./img/PinguLinux_Goku_saiyan.png);
+}
+
+.p3{
+    background-image: url(./img/PinguLinux_Sonic.png);
+}
+
+.p4{
+    background-image: url(./img/PinguLinux_Viking2.png);    
+}
