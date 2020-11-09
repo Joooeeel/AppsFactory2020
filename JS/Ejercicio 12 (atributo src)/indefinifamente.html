@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar imagen</title>
+</head>
+<body>
+    <h1>Cambiar atributo src</h1>
+    <img src="./img/PinguLinux_Yoda.jpg" alt="imgn yoda pingu" id="btn" width="600px">
+</body>
+
+<script>
+    let f1 = true;
+
+    const changePhoto = _ =>{
+        
+        const photo = document.querySelector('#btn');
+        //operador ternario
+        photo.src = f1 == true? './img/PinguLinux_Ying_Yang.png':'./img/PinguLinux_Yoda.jpg';
+        
+        /*
+        if(f1){
+            photo.src = './img/PinguLinux_Ying_Yang.png';
+        }else{
+            photo.src = './img/PinguLinux_Yoda.jpg';
+        }
+        */
+       
+        f1 = !f1;
+    }
+
+
+    document.querySelector('#btn').addEventListener('click', changePhoto);
+</script>
+</html>
