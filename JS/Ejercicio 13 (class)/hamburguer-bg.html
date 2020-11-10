@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn{
+            width:50px; height: 50px;
+            display: block;
+            /*right: 0px; top: 0px;*/
+            background-color: red;  
+        }
+
+            .btn:hover{
+                cursor: pointer;
+            }
+
+        .menu{
+            width: 800px; height: 600px;
+            position: fixed;
+            right: -750px; top: 0px;
+            background-color: rgba(150, 150, 100, 0);
+            transition: 1s;
+        }
+
+        .ham{
+            background-color:  rgba(150, 150, 100, 1);
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menú desplegable hamburguesa</h1>
+    <div class="menu">
+        <!--<a href="#" class="btn"></a>-->
+        <div class="btn"></div>
+    </div>
+</body>
+
+<script>
+    let desplegado = false;
+
+    const desplega = _ =>{
+            document.querySelector('.menu').classList.toggle('ham'); 
+            desplegado = !desplegado;  
+    }
+
+    window.addEventListener('load', ()=>{
+        window.addEventListener('click', function(e){
+            const menu = document.querySelector('.menu');
+            if(!menu.contains(e.target)){    
+                desplega();
+            }
+        })
+    })
+
+    document.querySelector('.btn').addEventListener('click', desplega);
+</script>
+</html>

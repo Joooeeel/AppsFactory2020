@@ -16,6 +16,7 @@ window.addEventListener('load', () =>{
         }
     });
 
+    
     document.querySelector('#show').addEventListener('click', mostrar);
     document.querySelector('#hide').addEventListener('click', ocultar);
 
