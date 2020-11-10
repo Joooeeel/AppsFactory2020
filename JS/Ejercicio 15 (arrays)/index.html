@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const nombres = ["Juan", "Roberto", "Ernesto", "Miriam", "Laura"];
+
+    const res = nombres.map(value => `Conozco a ${value}`);
+
+    console.log(res);
+
+    const my_List = [1,9,3,8,5,7];
+
+    my_List.forEach(value =>{
+        console.log(value * 2);
+    })
+
+    const nums = [1, 9, -3, 8, -5, 0];
+    let posnum = 0;
+    let negnum = 0;
+    let posvalue = 0;
+    let negvalue = 0;
+    let zeronum = 0;
+
+    nums.forEach(value => {
+
+        if(value > 0){
+            posnum++;
+            posvalue += value;
+        }else if(value < 0){
+            negnum++;
+            negvalue += value;
+        }else{
+            zeronum++;
+        }
+
+    })
+
+    console.log(`positivos: ${posnum}, negativos: ${negnum}, zeros: ${zeronum}.`)
+    console.log(`positivos medina: ${posvalue/posnum}, negativos: ${negvalue/negnum}.`)
+</script>
+</html>
