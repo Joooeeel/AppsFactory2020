@@ -42,16 +42,20 @@
 <script>
     let desplegado = false;
 
-    const desplega = _ =>{
-            document.querySelector('.menu').classList.toggle('ham'); 
-            desplegado = !desplegado;  
+    const desplega = e =>{
+        document.querySelector('.menu').classList.toggle('ham'); 
+        desplegado = !desplegado;  
+    }
+
+    const quitar = e =>{
+        document.querySelector('.menu').classList.remove('ham');
     }
 
     window.addEventListener('load', ()=>{
         window.addEventListener('click', function(e){
             const menu = document.querySelector('.menu');
             if(!menu.contains(e.target)){    
-                desplega();
+                menu.classList.remove('ham');
             }
         })
     })
