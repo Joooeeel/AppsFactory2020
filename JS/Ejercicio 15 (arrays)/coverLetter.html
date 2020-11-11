@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>formulario con foreach en jQuery - iterando textos</title>
+    <script type="text/javascript" src="/curso/jquery/ex/jquery.js"></script>
+    <meta name="description"
+          content="Ejemplo de uso del bucle foreach para recorrer varios objetos de un documento html y montar una carta de presentación a partir de ellos">
+
+    <style type="text/css">
+        #coste {
+            background: pink;
+            padding: 1em;
+            display: block;
+            font-size: 4em
+        }
+    </style>
+
+</head>
+<body>
+<h1>Carta de presentación con Javascript</h1>
+<fieldset>
+    <legend>Motivo</legend>
+
+    <input name="motivo" type="radio"
+           value="Cuento con varios años de experiencia muy sólida como profesional por lo cual me creo capacitad@  para asumir las responsabilidades del puesto que ustedes anuncian"
+           checked>
+    Cuento con varios años de experiencia muy sólida como profesional por lo cual me creo capacitad@ para asumir las
+    responsabilidades del puesto que ustedes anuncian
+    <br>
+
+    <input name="motivo" type="radio"
+           value="En relación al anuncio publicado donde solicitaban un profesional para su empresa, les presento mi candidatura.">
+    En relación al anuncio publicado donde solicitaban un profesional para su empresa, les presento mi candidatura.
+    <br>
+
+    <input name="motivo" type="radio"
+           value="El pasado día del mes corriente, se publicó una oferta de trabajo en la que se hacía constar que necesitaban cubrir un puesto de trabajo">
+    El pasado día del mes corriente, se publicó una oferta de trabajo en la que se hacía constar que necesitaban cubrir
+    un puesto de trabajo
+    <br>
+
+    <input name="motivo" type="radio"
+           value="En respuesta a su anuncio aparecido en el periódico , me es grato manifestarle mi interés por el  puesto">
+    En respuesta a su anuncio aparecido en el periódico , me es grato manifestarle mi interés por el puesto
+    <br>
+
+    <input name="motivo" type="radio" value="Me dirijo a ustedes con el fin de ofrecerles mis servicios profesionales">
+    Me dirijo a ustedes con el fin de ofrecerles mis servicios profesionales
+    <br>
+
+    <input name="motivo" type="radio"
+           value="En   relación   al   anuncio   de   referencia tengo el gusto de enviarle mi currículo ya que, como verá en el mismo, creo reunir todos los requisitos para el puesto de trabajo que quieren cubrir.">
+    En relación al anuncio de referencia tengo el gusto de enviarle mi currículo ya que, como verá en el mismo, creo
+    reunir todos los requisitos para el puesto de trabajo que quieren cubrir.
+    <br>
+
+    <input name="motivo" type="radio"
+           value="Me pongo en contacto con ustedes para manifestarles mi interés por el puesto de trabajo que solicitaban.">
+    Me pongo en contacto con ustedes para manifestarles mi interés por el puesto de trabajo que solicitaban.
+    <br>
+
+    <input name="motivo" type="radio"
+           value="Me dirijo a ustedes para hacerles constar mi interés por desarrollar mi futuro profesional en  su empresa.">
+    Me dirijo a ustedes para hacerles constar mi interés por desarrollar mi futuro profesional en su empresa.
+    <br>
+
+    <input name="motivo" type="radio"
+           value="Sería de mi agrado poderme integrar en aquella actividad que me permita continuar con lo ya aprendido"> Sería de mi agrado poderme integrar en aquella actividad que me permita continuar con lo ya
+    aprendido<br>
+
+</fieldset>
+
+
+<fieldset>
+    <legend>Medallas</legend>
+    <input name="medalla" type="radio" value="Como he reseñado en el historial adjunto, aunque solo cuento años de experiencia, confío en mi afán de de superación para llegar a poseer un dominio completo de la
+		profesión. Creo contar con las aptitudes necesarias para poder aportar beneficios muy positivos a su organización" checked>Como he reseñado en el historial adjunto, aunque solo cuento años de experiencia,
+    confío en mi afán de de superación para llegar a poseer un dominio completo de la
+    profesión. Creo contar con las aptitudes necesarias para poder aportar beneficios muy
+    positivos a su organización<br>
+    <input name="medalla" type="radio" value="Debido a mis cualidades personales y mi experiencia, me considero
+		capacitado para desempeñar ese trabajo.">Debido a mis cualidades personales y mi experiencia, me considero
+    capacitado para desempeñar ese trabajo. <br>
+    <input name="medalla" type="radio"
+           value="Me adapto con facilidad al trabajo en equipo y baso mi actuación `profesional en una relación duradera y de confianza con la empresa.">Me
+    adapto con facilidad al trabajo en equipo y baso mi actuación `profesional en una relación duradera y de confianza
+    con la empresa. <br>
+
+    <input name="medalla" type="radio" value="El puesto que ustedes ofrecen coincide plenamente con mis objetivos profesionales y constituye para mi un reto profesional, qué trataré de llevar a cabo con todo
+		entusiasmo, para mutuo beneficio">El puesto que ustedes ofrecen coincide plenamente con mis objetivos
+    profesionales y constituye para mi un reto profesional, qué trataré de llevar a cabo con todo
+    entusiasmo, para mutuo beneficio. <br>
+
+    <input name="medalla" type="radio" value="Considero que mis características de formación y experiencia puedan corresponder con   las   de su anuncio y me complazco en enviarles mi CV para
+		su consideración.">Considero que mis características de formación y experiencia puedan corresponder
+    con las de su anuncio y me complazco en enviarles mi CV para su consideración.
+    <br>
+    <input name="medalla" type="radio"
+           value="Por   mi formación y por mi entusiasmo en desarrollar al máximo mi carrera profesional, espero ser un firme candidato para cubrir el puesto que se ofrece.">Por
+    mi formación y por mi entusiasmo en desarrollar al máximo mi carrera profesional, espero ser un firme candidato para
+    cubrir el puesto que se ofrece.
+    <br>
+    <input name="medalla" type="radio"
+           value="Mis   aspiraciones   profesionales   se   dirigen   profesionalmente   hacia sectores donde mi formación  y experiencia podrían consolidarse. Tengo plena disponibilidad para cambios de residencia y viajes.">Mis
+    aspiraciones profesionales se dirigen profesionalmente hacia sectores donde mi formación y experiencia podrían
+    consolidarse. Tengo plena disponibilidad para cambios de residencia y viajes.
+    <br>
+    <input name="medalla" type="radio" value="Tanto el interés por ampliar mi carrera profesional, como mi capacidad de trabajo y responsabilidad, pueden resultar de utilidad para una empresa consolidada como la
+		suya.">Tanto el interés por ampliar mi carrera profesional, como mi capacidad de trabajo y
+    responsabilidad, pueden resultar de utilidad para una empresa consolidada como la
+    suya.
+
+
+</fieldset>
+
+<fieldset>
+    <legend>Objetivo</legend>
+    <input name="objetivo" type="radio"
+           value="Agradecería   la   oportunidad   de   poder   presentarme   ante   ustedes   para   contestar cualquier  pregunta y ampliar lo resumido en mi historial" checked>Agradecería la oportunidad de poder presentarme ante ustedes para contestar cualquier pregunta y
+    ampliar lo resumido en mi historial <br>
+    <input name="objetivo" type="radio" value="Les agradecería me dejasen formar parte del proceso de selección.">Les
+    agradecería me dejasen formar parte del proceso de selección.
+
+    <br>
+    <input name="objetivo" type="radio"
+           value="Por todo ello espero que tenga en cuenta mi candidatura ante cualquier necesidad futura se ponga en contacto conmigo.">Por
+    todo ello espero que tenga en cuenta mi candidatura ante cualquier necesidad futura se ponga en contacto conmigo.
+
+    <br>
+
+
+    <input name="objetivo" type="radio"
+           value="Desearía formar parte del proceso de selección, y quedo a su disposición para mantener una entrevista personal si lo estiman oportuno.">Desearía
+    formar parte del proceso de selección, y quedo a su disposición para mantener una entrevista personal si lo estiman
+    oportuno. <br>
+
+
+    <input name="objetivo" type="radio"
+           value="Espero se pongan en contacto conmigo para poderles ampliar mi datos en una entrevista personal.">
+    Espero se pongan en contacto conmigo para poderles ampliar mi datos en una entrevista personal. <br>
+
+
+    <input name="objetivo" type="radio"
+           value="Por todo ello, creo reunir los requisitos que mencionan para el futuro ocupante del puesto, deseando poder formar parte del proceso de selección.">Por
+    todo ello, creo reunir los requisitos que mencionan para el futuro ocupante del puesto, deseando poder formar parte
+    del proceso de selección. <br>
+
+
+    <input name="objetivo" type="radio"
+           value="Esperando comentar con usted en una próxima entrevista mi historial profesional, aprovecho la ocasión para saludarle atentamente.">Esperando
+    comentar con usted en una próxima entrevista mi historial profesional, aprovecho la ocasión para saludarle
+    atentamente. <br>
+</fieldset>
+
+<fieldset>
+    <legend>Despedida</legend>
+
+    <input name="despedida" type="radio" value="Un cordial saludo">Un cordial saludo <br>
+
+
+    <input name="despedida" type="radio" value="En espera de sus noticias y sin otro particular">En espera de sus
+    noticias y sin otro particular <br>
+
+
+    <input name="despedida" type="radio"
+           value="Aprovecho   la   ocasión   para   agradecerle   el   interés   que   ha   manifestado   por   mi candidatura. Atentamente">Aprovecho
+    la ocasión para agradecerle el interés que ha manifestado por mi candidatura. Atentamente <br>
+
+
+    <input name="despedida" type="radio" value="Muy atentamente">Muy atentamente <br>
+
+
+    <input name="despedida" type="radio" value="Atentamente">Atentamente <br>
+
+
+    <input name="despedida" type="radio" value="A la espera de recibir noticias suyas, les saluda atentamente">A la
+    espera de recibir noticias suyas, les saluda atentamente.
+
+    <br>
+    <input name="despedida" type="radio" value="Agradeciéndoles la atención restada , se despide atentamente">Agradeciéndoles
+    la atención restada , se despide atentamente.
+
+</fieldset>
+
+<span id="coste"></span>
+
+    <script src="javascript.js"></script>
+
+</body>
+<script>
+    const comprobarOpcionesSeleccionadas = () => {
+    const inputs = document.querySelectorAll("input:checked");
+    let txtFinal = "";
+    inputs.forEach( obj => {
+        txtFinal += obj.value + "<br><br/>";
+    });
+    document.querySelector("#coste").innerHTML = txtFinal;
+}
+
+    comprobarOpcionesSeleccionadas();
+
+    document.querySelectorAll("input").forEach( (obj) => {
+		    obj.addEventListener('click', comprobarOpcionesSeleccionadas);    	
+    });
+</script>
+</html>

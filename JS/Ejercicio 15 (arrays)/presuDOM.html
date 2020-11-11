@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #price{
+            background: pink;
+            padding: 100px;
+            font-size: 4em;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Presu Javascript</h1>
+
+    <div>
+        <h3>Diseño</h3>
+        <p><input type="radio" name="design" id="design" value="0" checked> El cliente me suministra el diseño</p>
+        <p><input type="radio" name="design" id="design" value="350"> Yo mismo hago diseño</p>
+    </div>
+
+    <div>
+        <h3>Tienda</h3>
+        <p><input type="radio" name="shop" id="shop" value="0" checked> La pagina no tiene carrito</p>
+        <p><input type="radio" name="shop" id="shop" value="450" > La pagina tiene carrito</p>
+    </div>
+
+    <div>
+        <h3>Suscription</h3>
+        <p><input type="radio" name="sus" id="sus" value="0" checked> La pagina no tiene Suscription</p>
+        <p><input type="radio" name="sus" id="sus" value="250" > La pagina tiene Suscription</p>
+    </div>
+
+    <span id="price"></span>
+</body>
+
+<script>
+    
+    const checkSelected = _ =>{
+        console.log('HOLA')
+        const btns = document.querySelectorAll('input:checked');
+        let priceFinal = 400;
+
+        btns.forEach(elem =>{
+            priceFinal += parseInt(elem.value);
+        })
+
+        document.querySelector('#price').innerHTML = `${priceFinal} €`;
+    }
+    
+    checkSelected();
+
+    document.querySelectorAll('input').forEach(btn =>{
+        btn.addEventListener('click', checkSelected);
+    })
+</script>
+</html>

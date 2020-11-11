@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionario</title>
+</head>
+<body>
+    <h1>Qüestionario valida respuestas</h1>
+
+    <div class="pregunta">
+        <p>¿Que super heroe es más fuerte?</p>
+        <p><input type="radio" name="pregunta1">Batman</p>
+        <p><input type="radio" class="correct" name="pregunta1">Superman</p>
+    </div>
+    
+    <div class="pregunta">
+        <p>¿En qué consiste el sentido aracnido de Spiderman?</p>
+        <p><input type="radio" name="pregunta2">Puede detectar cuando hay arañas cerca.</p>
+        <p><input type="radio" class="correct" name="pregunta2">Puede detectar cuando hay un peligro cerca.</p>
+    </div>
+    
+    <div class="pregunta">
+        <p>¿Cuál es el verdadero nombre de Spiderman?</p>
+        <p><input type="radio" class="correct" name="pregunta3">Peter Parker</p>
+        <p><input type="radio" name="pregunta3">Bruce Wayne</p>
+    </div>
+    <input type="button" id="comprobar_preguntas" value="Comprobar Preguntas">
+</body>
+
+<script>
+
+    document.querySelector('#comprobar_preguntas').addEventListener('click', () =>{
+        document.querySelectorAll('input[type=radio]:checked').forEach(element => {
+            if(element.classList.contains('correct')){
+                element.closest('p').style.backgroundColor = 'green';
+            }else{
+                element.closest('p').style.backgroundColor = 'red';
+            }
+        });
+    })
+</script>
+</html>
