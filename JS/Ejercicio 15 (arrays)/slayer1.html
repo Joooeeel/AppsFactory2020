@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider con efecto animado con jQuery | Pablo Monteserín</title>
+    <meta name="description"
+    content="Ejemplo de la programación de un slider que se desplaza utilizando efectos de CSS">
+
+    <style>
+        #wrapper {
+            width: 500px;
+            height: 500px;
+            overflow: hidden
+        }
+        
+        #layers {
+        width: 1500px;
+        height: 500px;
+        transition: 1s;
+        display: flex;
+    }
+    .capa0 {
+        background: url(./img/PinguLinux_Bob_Marley.png);
+    }
+
+    .capa1 {
+        background: url(./img/PinguLinux_Celula.png);
+    }
+
+    .capa2 {
+        background: url(./img/PinguLinux_Capitan_America.png);
+    }
+
+
+    .capa {
+        width: 500px;
+        height: 500px;
+        transition: 1s;
+
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Programación de un slider con animaciones usando Javascript</h1>
+    <a href="#" id="enlace1">Enlace 1</a>
+    <div id="wrapper">
+        <div id="layers">
+            <div class="capa0 capa"></div>
+            <div class="capa1 capa"></div>
+            <div class="capa2 capa"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    let contador=0;
+    let sign = -1;
+
+    const move = _ =>{
+        
+        const layersTotal = document.querySelectorAll('.capa');
+
+        /*if(contador == layersTotal.length){
+            console.log(contador);
+            contador=0;
+        }*/
+
+        
+        if(contador == layersTotal.length -1|| contador < 1){
+            //console.log('Entra al if')
+            
+            sign *= -1;
+        }
+        
+        document.querySelectorAll('.capa').forEach(elem =>{
+            elem.style.opacity = 0;
+            elem.style.transform = 'scale(0, 0)';
+        })
+
+        //const elem = contador + 1;
+        contador = contador + sign;
+        let des = contador * 500;
+
+        const elem = contador +1;
+
+
+        const img = document.querySelector('.capa:nth-child('+(elem)+')');
+        img.style.transform = 'scale(1, 1)';
+        img.style.opacity = 1;
+
+        document.querySelector('#layers').style.marginLeft = -des+'px'
+
+    }
+
+    window.addEventListener('load', () =>{
+        setInterval(move, 5000);
+    })
+
+    document.querySelector('#enlace1').addEventListener('click', move);
+</script>
+</html>

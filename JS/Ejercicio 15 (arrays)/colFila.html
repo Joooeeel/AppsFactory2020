@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <td><input type="radio" name="nombreRadio"/></td>
+            <td>txt2</td>
+            <td>txt3</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="nombreRadio"/></td>
+            <td>txt2</td>
+            <td>txt3</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="nombreRadio"/></td>
+            <td>txt2</td>
+            <td>txt3</td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    document.querySelectorAll('tr').forEach(elem2 =>{
+        elem2.style.backgroundColor = 'white';            
+    })
+    document.querySelectorAll('tr').forEach(elem =>{
+        elem.addEventListener('click', ()=>{
+            
+            
+            elem.style.backgroundColor='#959E0F';
+
+            /*if(elem.querySelector('input[type=radio]').checked = false){
+                elem.style.backgroundColor = "white";
+            }*/
+            
+        })
+    })
+</script>
+</html>

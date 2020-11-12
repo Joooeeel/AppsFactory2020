@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtro de contenido</title>
+    <meta name="description"content="">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 15px;
+        }
+
+        .verde {
+            background: green
+        }
+
+        .naranja {
+            background: orange
+        }
+
+        .rojo {
+            background: red
+        }
+
+        .azul {
+            background: blue
+        }
+
+        .oculta {
+            overflow: hidden;
+            animation: ocultar 0.5s;
+            animation-fill-mode: forwards
+        }
+
+        @keyframes ocultar {
+
+            to {
+                width: 0;
+                height: 0;
+                margin: 0;
+                border: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Implementación de un filtro de objetos</h1>
+<ol class="filtro">
+    <li><a href="#" data-atribute="todos">Todos</a></li>
+    <li><a href="#" data-atribute="rojo">Rojo</a></li>
+    <li><a href="#" data-atribute="azul">Azul</a></li>
+    <li><a href="#" data-atribute="naranja">Naranja</a></li>
+    <li><a href="#" data-atribute="verde">Verde</a></li>
+</ol>
+
+<div class="box rojo"></div
+>
+<div class="box azul"></div
+>
+<div class="box azul"></div
+>
+<div class="box verde"></div
+>
+<div class="box naranja"></div
+>
+<div class="box naranja"></div
+>
+<div class="box verde"></div
+>
+<div class="box rojo"></div
+>
+<div class="box azul"></div
+>
+<div class="box rojo"></div
+>
+<div class="box rojo"></div
+>
+<div class="box verde"></div
+>
+<div class="box naranja"></div
+>
+<div class="box naranja"></div
+>
+<div class="box verde"></div>
+
+</body>
+
+<script>
+    window.addEventListener('load', () =>{
+        document.querySelectorAll('a').forEach(elem =>{
+            elem.addEventListener('click', e =>{
+                let fil = elem.getAttribute('data-atribute');
+                const box = document.querySelectorAll('.box');
+                box.forEach(elem =>{
+                    if(!elem.classList.contains(fil)){
+                        elem.classList.add('oculta');
+                    }else{
+                        elem.classList.remove('oculta');
+                    }
+                    if(fil == 'todos'){
+                        elem.classList.remove('oculta');
+                    }
+                })
+            })
+        })
+    })
+</script>
+</html>
