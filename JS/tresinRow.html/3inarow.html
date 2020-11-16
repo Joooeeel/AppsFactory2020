@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tres en Raya</title>
+
+    <style>
+        .container{
+            width: 920px;
+            height: 920px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .gameCube{
+            width: 300px; height: 300px;
+            background-color: black;
+            border: red 2px solid;
+            margin-left: 2px;
+            transition: 1s;
+        }
+
+        .gameCube:hover{
+            cursor: pointer;
+            background-color: rgb(187, 187, 187);
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        .retry{
+            position: fixed;
+            right: 5px;
+            top: 5px;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Tres en raya con Javascript</h1>
+
+    <div class="container">
+        <div class="gameCube" data-box="0"></div>
+        <div class="gameCube" data-box="1"></div>
+        <div class="gameCube" data-box="2"></div>
+        <div class="gameCube" data-box="3"></div>
+        <div class="gameCube" data-box="4"></div>
+        <div class="gameCube" data-box="5"></div>
+        <div class="gameCube" data-box="6"></div>
+        <div class="gameCube" data-box="7"></div>
+        <div class="gameCube" data-box="8"></div>
+
+        <input type="button" class="retry" value="Play Again">
+    </div>
+</body>
+
+<script>
+    let player = true;
+    let turn = 0;
+    let cubes = [null, null, null, null, null, null, null, null, null];
+    let win = false;
+
+    const move = e =>{
+        let box = e.target;
+        let pos = box.getAttribute('data-box');
+        console.log(cubes);
+        changeColor(box, pos);
+        let win = checkWin();
+
+        if(win){
+            if(player){
+                alert('1RST PLAYER WINS');
+            }else{
+                alert('2ND PLAYER WINS');
+            }
+        }
+
+        nextTurn();
+    }
+
+    const changeColor = (obj, i) =>{
+
+        if(player){
+            obj.classList.toggle('red');
+            cubes[i] = 'red';
+        }else{
+            obj.classList.toggle('green');
+            cubes[i] = 'green';
+        }      
+    }
+
+    const checkWin = _ =>{
+        /*
+        let checkbox = document.querySelectorAll('.gameCube');
+        
+        if(checkbox[0].classList.contains('red') && checkbox[1].classList.contains('red') && checkbox[2].classList.contains('red') ||
+        checkbox[0].classList.contains('green') && checkbox[1].classList.contains('green') && checkbox[2].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }
+
+        if(checkbox[0].classList.contains('red') && checkbox[3].classList.contains('red') && checkbox[6].classList.contains('red') ||
+        checkbox[0].classList.contains('green') && checkbox[3].classList.contains('green') && checkbox[6].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }
+        if(checkbox[3].classList.contains('red') && checkbox[4].classList.contains('red') && checkbox[5].classList.contains('red') ||
+        checkbox[3].classList.contains('green') && checkbox[4].classList.contains('green') && checkbox[5].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }
+        if(checkbox[6].classList.contains('red') && checkbox[7].classList.contains('red') && checkbox[8].classList.contains('red') ||
+        checkbox[6].classList.contains('green') && checkbox[7].classList.contains('green') && checkbox[8].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }
+        if(checkbox[1].classList.contains('red') && checkbox[4].classList.contains('red') && checkbox[7].classList.contains('red') ||
+        checkbox[1].classList.contains('green') && checkbox[4].classList.contains('green') && checkbox[7].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }
+        if(checkbox[2].classList.contains('red') && checkbox[5].classList.contains('red') && checkbox[8].classList.contains('red') ||
+        checkbox[2].classList.contains('green') && checkbox[5].classList.contains('green') && checkbox[8].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }
+        if(checkbox[0].classList.contains('red') && checkbox[4].classList.contains('red') && checkbox[8].classList.contains('red') ||
+        checkbox[0].classList.contains('green') && checkbox[4].classList.contains('green') && checkbox[8].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }
+        if(checkbox[2].classList.contains('red') && checkbox[4].classList.contains('red') && checkbox[6].classList.contains('red') ||
+        checkbox[2].classList.contains('green') && checkbox[4].classList.contains('green') && checkbox[6].classList.contains('green')
+        ){
+            alert('PLAYER WIN');
+        }*/
+        if(cubes[0] == cubes[1] && cubes[1] == cubes[2] && cubes[0] != null){
+            return true;
+        }else if(cubes[3] == cubes[4] && cubes[4] == cubes[5] && cubes[3] != null){
+            return true;
+        }else if(cubes[6] == cubes[7] && cubes[7] == cubes[8] && cubes[6] != null){
+            return true;
+        }else if(cubes[0] == cubes[3] && cubes[3] == cubes[6] && cubes[0] != null){
+            return true;
+        }else if(cubes[1] == cubes[4] && cubes[4] == cubes[7] && cubes[1] != null){
+            return true;
+        }else if(cubes[2] == cubes[5] && cubes[5] == cubes[8] && cubes[2] != null){
+            return true;
+        }else if(cubes[0] == cubes[4] && cubes[4] == cubes[8] && cubes[0] != null){
+            return true;
+        }else if(cubes[2] == cubes[4] && cubes[4] == cubes[6] && cubes[2] != null){
+            return true;        
+        }else{
+            return false;
+        }
+    }
+
+    const nextTurn = _ =>{
+        player = !player;
+        turn++;
+    }
+
+    const reload = _ =>{
+        window.location.reload();
+    }
+
+    window.addEventListener('load', ()=>{
+        document.querySelectorAll('.gameCube').forEach(elem =>{
+            elem.addEventListener('click', move);
+        })
+
+        document.querySelector('.retry').addEventListener('click', reload);
+    })
+</script>
+</html>

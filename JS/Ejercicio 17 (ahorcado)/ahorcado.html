@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            width: 200px; height: 330px;
+            background: url(./img/primera.png);
+            background-repeat: no-repeat;
+        }
+
+        #cont{
+            display: inline-block;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ahorcado con JavaScript</h1>
+
+    <div id="game">
+        <p>Introduze una letra</p>
+        <input type="text" name="let" id="letter">
+        <input type="button" value="Evaluar" id="evalue">
+        <div id="cont"></div>
+        <div id="secret_word"></div>
+        <div id="image"></div>
+    </div>
+    
+</body>
+<script>
+    const secretWord = ['carpet', 'zebra', 'cometa', 'mitos'];
+    let errorsCount = 0;
+
+    const evaluate = (word, charact, wordMistery) =>{
+        let wordMistery2 = wordMistery;
+        let match = false;
+
+        for(let i=0; i < word.length; i++){
+            if(word[i] == charact){
+                wordMistery2 = wordMistery.replaceAt(i*2, charact);
+                match = true;
+            }
+        }
+
+        if(match == false){
+            errorMove();
+        }
+
+        return wordMistery2;
+    }
+
+    const errorMove = _ =>{
+        errorsCount++;
+        let move = -200 * errorsCount;
+        document.querySelector('#image').style.backgroundPosition = move +'px 0px';
+
+    }
+
+    const printonHTML = mistery =>{
+        document.querySelector('#secret_word').innerHTML = mistery;
+    }
+
+    window.addEventListener('load', () =>{
+
+        const randWord = secretWord[Math.floor(Math.random() * secretWord.length)];
+        let wordScript = randWord.replace(/./g, "_ ");
+        let contador = 0;
+        printonHTML(wordScript);
+        console.log(randWord);
+
+        document.querySelector('#evalue').addEventListener('click', ()=>{
+            console.log(wordScript);
+            let letter = document.querySelector('#letter').value;
+            wordScript = evaluate(randWord, letter, wordScript);
+            printonHTML(wordScript);
+            document.querySelector('#cont').innerHTML = contador;
+            contador++;
+            
+            if (wordScript.indexOf("_") < 0) {
+                document.querySelector("#game").innerHTML = '<span style="font-size:4em">VICTORIA</span>';
+            }
+            if(errorsCount == 4){
+                document.querySelector("#game").innerHTML = '<span style="font-size:4em">HAS PERDIDO</span>';
+            }
+        });
+    })
+
+    String.prototype.replaceAt=function(index, character) { return this.substr(0, index) + character + this.substr(index+character.length); } 
+</script>
+</html>

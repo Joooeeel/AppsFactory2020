@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list">
+        <ul id="ul_list"></ul>
+    </div>
+
+</body>
+
+<script>
+      const animales = [
+        {
+            "nombre": "Tobby",
+            "apellidos": "Fernandez"
+        },
+        {
+            "nombre": "Wiskiss",
+            "apellidos": "Fernandez"
+        }
+    ];
+    const execution = _ =>{ 
+        
+        let code = "";
+        //const list = document.createAttribute('ul');
+        //list.setAttribute('id', 'ul_list');
+        let li = "";
+
+        animales.forEach(a =>{
+            li = li + '<li>' + a.nombre + ' ' + a.apellidos + '</li>';
+            code += `${a.nombre}  ${a.apellidos}  ` 
+               
+        })
+        //document.querySelector('#list').innerHTML = list;
+        document.querySelector('#ul_list').innerHTML = li;
+    }
+    execution();
+</script>
+</html>
