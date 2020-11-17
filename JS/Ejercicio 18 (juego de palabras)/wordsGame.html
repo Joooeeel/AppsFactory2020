@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Palabras</title>
+
+    <style>
+        .container{
+            width: 1024px;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .fraseDesordenada{
+            width: 1024px;
+            border: crimson 3px dashed;
+            padding: 20px;
+        }
+
+        .fraseOrdenada{
+            width: 1024px;
+            border: black 3px solid;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 2rem;
+            
+        }
+
+        .button{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .selected{
+            color: rgba(56, 56, 56, 0.6);
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        .button:hover{
+            background-color: rgba(155, 13, 42, 0.6);
+            cursor: pointer;
+        }
+
+        #com{
+            padding: 20px;
+        }
+
+        #retry{
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Juego Palabras</h1>
+        <p>Ordena las palabras para hacer una frase:</p>
+        <div class="fraseDesordenada"></div>
+        <p>Tu frase: </p>
+        <div class="fraseOrdenada"></div>
+        <br>
+        <input type="button" value="Comprobar" id='com'>
+        <input type="button" value="Retry" id='retry'>
+    </div>
+</body>
+<script>
+    const col_sent = ['A caballo regalado no le mires el dentado', 
+    'Aunque la mona se vista de seda, mona se queda',
+    'A quien buen árbol se arrima, buena sombra le cobija',
+    'Más vale pájaro en mano que ciento volando',
+    'En martes ni te cases ni te embarques',
+    'Cuando el grajo vuela bajo, hace un frio del carajo'];
+
+    let order_sent = '';
+
+    const randomizeSent = elem =>{
+        let ctr = elem.length;
+        let temp;
+        let index;
+        
+        while (ctr > 0) {
+            
+            index = Math.floor(Math.random() * ctr);
+            
+            ctr--;
+            
+            temp = elem[ctr];
+            elem[ctr] = elem[index];
+            elem[index] = temp;
+        }
+
+        return elem;    
+    }
+
+    const printOnDOM = obj =>{
+        let code = '';
+
+        obj.forEach(element => {
+           code += '<span class="button">' + element + '</span>' + '    ' ;
+        });
+
+        document.querySelector('.fraseDesordenada').innerHTML = code;
+    }
+
+    const addToHTML = e =>{
+        let word = e.target.innerHTML;
+        order_sent += word + ' ';
+        document.querySelector('.fraseOrdenada').innerHTML = order_sent;
+
+        e.target.classList.remove('button');
+        e.target.classList.add('selected');
+    }
+
+    const check = (init_sent) =>{
+        let final_sent = document.querySelector('.fraseOrdenada').innerHTML;
+        let final_check = final_sent.substring(0, final_sent.length - 1);
+        
+        if(final_check == init_sent){
+            document.querySelector('.fraseOrdenada').style.backgroundColor = 'green';
+        }else{
+            document.querySelector('.fraseOrdenada').style.backgroundColor = 'red';
+        }
+    }
+
+    const reload = _ =>{
+        window.location.reload();
+    }
+
+    window.addEventListener('load', ()=>{
+        //Select randoom sentance from array
+        const random_sent = col_sent[Math.floor(Math.random() * col_sent.length)];
+        console.log(random_sent);
+
+        //Transform string to array
+        const array_sent = random_sent.split(' ');
+
+        //Desorder sentance
+        const unorder_sent = randomizeSent(array_sent);
+        
+        //Print on HTML
+        printOnDOM(unorder_sent);
+
+        //Listener for spans in HTML
+        document.querySelectorAll('.button').forEach(obj =>{
+            obj.addEventListener('click', addToHTML)
+        })
+
+        document.querySelector('#com').addEventListener('click', () => check(random_sent));
+        document.querySelector('#retry').addEventListener('click', reload);
+    })
+
+    
+</script>
+</html>
