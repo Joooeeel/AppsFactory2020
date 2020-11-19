@@ -30,8 +30,16 @@ const App = () =>{
         const superficie = width * height;
         setSup(superficie);
     }
+
+    const IMAGES = {
+        img1: 'http://via.placeholder.com/100x100',
+        img2: 'http://via.placeholder.com/200x200',
+        img3: 'http://via.placeholder.com/300x300', 
+    };
+
+    const [currentImg, setCurrentImg] = useState(IMAGES.img1);
+
     return(
-        //<span onClick={() => actualizarContador(contador + 1)} >{contador}</span>
         <div>
         <h1>EUROS TO DOLLAR</h1>
         <input type="text" placeholder='Euros.....' onChange={eurValor}/>
@@ -49,26 +57,15 @@ const App = () =>{
         <button onClick={calculateSuperficie}>Processss</button>
         <br/>
         <span>{sup}</span>
+        <h1>Change image with button</h1>
+        <button onClick={ () => setCurrentImg(IMAGES.img1)}>Img 1</button>
+        <button onClick={ () => setCurrentImg(IMAGES.img2)}>Img 2</button>
+        <button onClick={ () => setCurrentImg(IMAGES.img3)}>Img 3</button>
+        <br/><br/>
+        <img src={currentImg}/>
         </div>
+        
     );
 };
 
 export default App;
-
-/*
-const App =_=>{
-    const [contador, setContador] = useState(5); 
-
-
-    const inputHaCambiado = e => setContador(e.target.value);
-
-
-    return <div>
-
-        <input type="text" onChange={inputHaCambiado}/>
-        
-        { contador }
-    
-    </div>
-}
-*/ 
