@@ -22,5 +22,18 @@
 
         document.querySelector('#list').innerHTML = list_name; 
     });
+    /*
+    const get_names = _ => {
+
+		fetch('https://swapi.dev/api/people/')
+			.then(res => res.json())
+			.then(res => {
+				document.querySelector('ul').innerHTML = res.results.reduce((valorAcumculado, obj) => valorAcumculado + "<li>" + obj.name + "</li>", "");
+
+			})
+	}
+	get_names()  
+
+    */
 </script>
 </html>
