@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import pablo from './img/descarga.png';
 
 
 const App = () =>{
@@ -34,7 +35,7 @@ const App = () =>{
     const IMAGES = {
         img1: 'http://via.placeholder.com/100x100',
         img2: 'http://via.placeholder.com/200x200',
-        img3: 'http://via.placeholder.com/300x300', 
+        img3: pablo, 
     };
 
     const [currentImg, setCurrentImg] = useState(IMAGES.img1);
