@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import style from 'styled-components';
+
 
 export const Pops = styled.div`
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     width: 100vw;
     height: 100vh;
     justify-content: center;
@@ -14,9 +14,9 @@ export const Pops = styled.div`
     left:0;
 
     div{
-        background-color: white;
-
-    width: 600px;
-    height:600px;
+        background-color: grey;
+        
+        width: 600px;
+        height:600px;
     }
 `
