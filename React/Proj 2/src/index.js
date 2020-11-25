@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './pop-up';
+import App from './assets/Apps';
 
 ReactDOM.render(
   <App />,
