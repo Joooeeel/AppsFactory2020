@@ -30,6 +30,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 50% 50%;
     width: 98%;
+    margin:auto;
 `
 
 export const ImageMain = styled.img`
@@ -40,4 +41,5 @@ export const Img = styled.img`
 width: 100%;
 ${({ active }) => active ? 'border:5px solid red; z-index:10' : 'border:5px solid transparent'};
 border-radius: 10px;
+cursor: pointer;
 `
