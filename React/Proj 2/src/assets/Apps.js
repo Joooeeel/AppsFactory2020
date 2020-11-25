@@ -1,10 +1,11 @@
 import RoutinesData from './data/routines';
-import { LeftBtn, RightBtn, Top, Title, Container, ImageMain } from './styled';
+import { LeftBtn, RightBtn, Top, Title, Container, ImageMain, Img } from './styled';
 import { useState } from 'react';
 
 export default () => {
     const [routines, setAlloutines] = useState(RoutinesData);
     const [currentRoutine, setRoutine] = useState(0);
+    const [exCurrent, setEx] = useState(0);
 
     const routineWorkout = routines[currentRoutine];
 
@@ -28,13 +29,15 @@ export default () => {
                 <RightBtn onClick={nextRoutine} />
             </Top>
             <Container>
-                <ImageMain src={routineWorkout.routine[currentRoutine].img} />
+                <ImageMain src={routineWorkout.routine[exCurrent].img} />
                 <Container>
                     {
-                        routineWorkout.routine.map((ex) => {
-                            console.log(ex);
-                            <img src={ex.img} />
-                        })
+                        routineWorkout.routine.map((ex, i) =>
+                            <Img src={ex.img}
+                                active={i === exCurrent}
+                                onClick={() => setEx(i)}
+                            />
+                        )
                     }
                 </Container>
             </Container>
