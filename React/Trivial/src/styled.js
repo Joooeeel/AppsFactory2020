@@ -23,7 +23,6 @@ export const QImg = styled.img`
 
 export const QuestionStyle = styled.div`
     padding: 20px;
-    
     display: flex;
 
     button{

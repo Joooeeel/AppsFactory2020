@@ -10,8 +10,33 @@ export default () => {
 
     const question = questions[currentQuestion];
 
+    console.log(answ);
+
     //POPUP
     const [isVisible, setVisible] = useState(false);
+
+    //RandomizeArray
+    const shuffleArray = (array) => {
+        let counter = array.length;
+
+        // While there are elements in the array
+        while (counter > 0) {
+            // Pick a random index
+            let index = Math.floor(Math.random() * counter);
+
+            // Decrease counter by 1
+            counter--;
+
+            // And swap the last element with it
+            let temp = array[counter];
+            array[counter] = array[index];
+            array[index] = temp;
+        }
+
+        return array;
+    }
+
+    const answ = shuffleArray(question.answers);
 
     const checkCorrect = (isRight) => {
         if (isRight && currentQuestion < questions.length - 1) {
@@ -23,20 +48,21 @@ export default () => {
         }
     }
 
-    const reset = param => setCurrentQuestion(0);
+    const reset = param => setCurrentQuestion(param);
 
     return (
         <div>
-            <h1>Trivial</h1>
+            <h1>Trivial con React</h1>
             <Container>
                 <h2>{question.question}</h2>
                 <Content>
                     <div>
                         {
-                            question.answers.map((q) =>
 
-                                <QuestionStyle onClick={() => checkCorrect(q.isRight)}>
-                                    <button>X</button>
+                            answ.map((q) =>
+
+                                <QuestionStyle>
+                                    <button onClick={() => checkCorrect(q.isRight)}>X</button>
                                     <p>{q.txt}</p>
                                 </QuestionStyle>
                             )
