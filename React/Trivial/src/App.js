@@ -23,6 +23,8 @@ export default () => {
         }
     }
 
+    const reset = param => setCurrentQuestion(0);
+
     return (
         <div>
             <h1>Trivial</h1>
@@ -43,7 +45,7 @@ export default () => {
                     <QImg src={question.img} />
                 </Content>
             </Container>
-            <PopUp isVisible={isVisible} setVisible={setVisible} />
+            <PopUp isVisible={isVisible} setVisible={setVisible} onClose={reset} />
         </div>
     );
 };

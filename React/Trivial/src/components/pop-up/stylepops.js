@@ -21,4 +21,8 @@ export const Pops = styled.div`
         text-align: center;
         padding: 40px;
     }
+
+    button{
+        padding: 20px;
+    }
 `
