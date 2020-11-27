@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tres en Raya</title>
 
     <style>
-        .container{
+        .container {
             width: 920px;
             height: 920px;
             margin: auto;
@@ -14,37 +15,38 @@
             flex-wrap: wrap;
         }
 
-        .gameCube{
-            width: 300px; height: 300px;
+        .gameCube {
+            width: 300px;
+            height: 300px;
             background-color: black;
             border: red 2px solid;
             margin-left: 2px;
             transition: 1s;
         }
 
-        .gameCube:hover{
+        .gameCube:hover {
             cursor: pointer;
             background-color: rgb(187, 187, 187);
         }
 
-        .red{
+        .red {
             background-color: red;
         }
 
-        .green{
+        .green {
             background-color: green;
         }
 
-        .retry{
+        .retry {
             position: fixed;
             right: 5px;
             top: 5px;
             padding: 20px;
         }
-
     </style>
 
 </head>
+
 <body>
     <h1>Tres en raya con Javascript</h1>
 
@@ -69,17 +71,17 @@
     let cubes = [null, null, null, null, null, null, null, null, null];
     let win = false;
 
-    const move = e =>{
+    const move = e => {
         let box = e.target;
         let pos = box.getAttribute('data-box');
         console.log(cubes);
         changeColor(box, pos);
         let win = checkWin();
 
-        if(win){
-            if(player){
+        if (win) {
+            if (player) {
                 alert('1RST PLAYER WINS');
-            }else{
+            } else {
                 alert('2ND PLAYER WINS');
             }
         }
@@ -87,18 +89,18 @@
         nextTurn();
     }
 
-    const changeColor = (obj, i) =>{
+    const changeColor = (obj, i) => {
 
-        if(player){
+        if (player) {
             obj.classList.toggle('red');
             cubes[i] = 'red';
-        }else{
+        } else {
             obj.classList.toggle('green');
             cubes[i] = 'green';
-        }      
+        }
     }
 
-    const checkWin = _ =>{
+    const checkWin = _ => {
         /*
         let checkbox = document.querySelectorAll('.gameCube');
         
@@ -143,42 +145,43 @@
         ){
             alert('PLAYER WIN');
         }*/
-        if(cubes[0] == cubes[1] && cubes[1] == cubes[2] && cubes[0] != null){
+        if (cubes[0] == cubes[1] && cubes[1] == cubes[2] && cubes[0] != null) {
             return true;
-        }else if(cubes[3] == cubes[4] && cubes[4] == cubes[5] && cubes[3] != null){
+        } else if (cubes[3] == cubes[4] && cubes[4] == cubes[5] && cubes[3] != null) {
             return true;
-        }else if(cubes[6] == cubes[7] && cubes[7] == cubes[8] && cubes[6] != null){
+        } else if (cubes[6] == cubes[7] && cubes[7] == cubes[8] && cubes[6] != null) {
             return true;
-        }else if(cubes[0] == cubes[3] && cubes[3] == cubes[6] && cubes[0] != null){
+        } else if (cubes[0] == cubes[3] && cubes[3] == cubes[6] && cubes[0] != null) {
             return true;
-        }else if(cubes[1] == cubes[4] && cubes[4] == cubes[7] && cubes[1] != null){
+        } else if (cubes[1] == cubes[4] && cubes[4] == cubes[7] && cubes[1] != null) {
             return true;
-        }else if(cubes[2] == cubes[5] && cubes[5] == cubes[8] && cubes[2] != null){
+        } else if (cubes[2] == cubes[5] && cubes[5] == cubes[8] && cubes[2] != null) {
             return true;
-        }else if(cubes[0] == cubes[4] && cubes[4] == cubes[8] && cubes[0] != null){
+        } else if (cubes[0] == cubes[4] && cubes[4] == cubes[8] && cubes[0] != null) {
             return true;
-        }else if(cubes[2] == cubes[4] && cubes[4] == cubes[6] && cubes[2] != null){
-            return true;        
-        }else{
+        } else if (cubes[2] == cubes[4] && cubes[4] == cubes[6] && cubes[2] != null) {
+            return true;
+        } else {
             return false;
         }
     }
 
-    const nextTurn = _ =>{
+    const nextTurn = _ => {
         player = !player;
         turn++;
     }
 
-    const reload = _ =>{
+    const reload = _ => {
         window.location.reload();
     }
 
-    window.addEventListener('load', ()=>{
-        document.querySelectorAll('.gameCube').forEach(elem =>{
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.gameCube').forEach(elem => {
             elem.addEventListener('click', move);
         })
 
         document.querySelector('.retry').addEventListener('click', reload);
     })
 </script>
+
 </html>
