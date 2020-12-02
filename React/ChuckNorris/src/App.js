@@ -28,8 +28,8 @@ export default () => {
         <div>
             <ul>
                 {
-                    categories.map((obj) =>
-                        <li><a href='#' onClick={() => getJoke(obj)}>{obj}</a></li>
+                    categories.map((obj, i) =>
+                        <li key={i}><a href='#' onClick={() => getJoke(obj)}>{obj}</a></li>
                     )
                 }
             </ul>
