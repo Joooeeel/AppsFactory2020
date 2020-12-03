@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { getCategories, getJokeFromCategory } from '../services/services';
+import { getCategories, getJokeFromCategory } from './services/services';
 
 
 export default () => {

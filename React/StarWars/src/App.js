@@ -1,8 +1,8 @@
+import Routes from './application/routes/routes';
+
 export default () => {
 
     return (
-        <div>
-            hello World!
-        </div>
+        <Routes />
     );
 };
