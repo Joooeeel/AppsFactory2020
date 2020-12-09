@@ -1,0 +1,91 @@
+paths:
+  /users/login:
+    post:
+      description: Login endpoint
+      tags:
+        - Public
+      requestBody:
+        description: User credentials (email, password)
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mail:
+                  type: string
+                pass:
+                  type: string
+            examples:
+              Credentials exmaple:
+                value:
+                  mail: pp@pp.com
+                  pass: 123
+      responses:
+        200:
+          description: Ok
+
+  /users/restricted-path:
+    get:
+      description: Restricted path
+      tags:
+        - Users
+      responses:
+        200:
+          description: Ok
+
+  /users/:
+    post:
+      description: Create a new user
+      tags:
+        - Users
+      requestBody:
+        description: User data
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mail:
+                  type: string
+                pass:
+                  type: string
+            examples:
+              Credentials exmaple:
+                value:
+                  mail: pp@pp.com
+                  pass: 123
+      responses:
+        200:
+          description: Ok
+
+  /users/{id}:
+    delete:
+      description: Delete user by id
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        200:
+          description: Ok
+    get:
+      description: Get user by id
+    patch:
+      description: Delete user by id
+      tags:
+        - Users
+      parameters:
+        - name: id
+          in: path
+          required: true
+      requestBody:
+        description: User data
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Ok
