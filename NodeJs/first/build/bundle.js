@@ -101,9 +101,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! express */ "express");
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Models_users__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @Models/users */ "./src/models/users/index.js");
+/* harmony import */ var _Models_users__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../models/users */ "./src/models/users/index.js");
 /* harmony import */ var _Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @Middlwares/error-handler */ "./src/middlewares/error-handler.js");
 /* harmony import */ var _Middlwares_restricted_access__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @Middlwares/restricted-access */ "./src/middlewares/restricted-access.js");
+
 
 
 
@@ -168,15 +169,14 @@ router.get('/', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncH
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            res.send("User id: ".concat(userId));
-            _context2.next = 3;
+            _context2.next = 2;
             return _Models_users__WEBPACK_IMPORTED_MODULE_3__.get();
 
-          case 3:
+          case 2:
             data = _context2.sent;
             res.send(data);
 
-          case 5:
+          case 4:
           case "end":
             return _context2.stop();
         }
@@ -191,15 +191,16 @@ router.get('/', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncH
 
 router.get('/:id', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncHandler)( /*#__PURE__*/function () {
   var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(req, res) {
-    var userId;
+    var id, user;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
-            userId = req.params.userId;
-            res.send("User id: ".concat(userId));
+            id = req.params.id;
+            user = (0,_Models_users__WEBPACK_IMPORTED_MODULE_3__.getById)(id);
+            res.send("User id: ".concat(user));
 
-          case 2:
+          case 3:
           case "end":
             return _context3.stop();
         }

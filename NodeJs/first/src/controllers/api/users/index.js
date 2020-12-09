@@ -2,6 +2,7 @@ import express from 'express';
 import * as UsersModel from "@Models/users";
 import { asyncHandler } from "@Middlwares/error-handler";
 import restrictedAccess from "@Middlwares/restricted-access";
+import { getById } from '../../../models/users';
 
 const router = express.Router();
 
@@ -19,18 +20,19 @@ router.post("/login", asyncHandler(async (req, res) => {
 })
 );
 
-
 // GET ALL
 router.get('/', asyncHandler(async (req, res) => {
-  res.send(`User id: ${userId}`);
   const data = await UsersModel.get();
   res.send(data);
 }));
 
 // GET BY ID
 router.get('/:id', asyncHandler(async (req, res) => {
-  const { params: { userId } } = req;
-  res.send(`User id: ${userId}`);
+  const { params: { id } } = req;
+
+  const user = getById(id);
+
+  res.send(`User id: ${user}`);
 }));
 
 //Create
