@@ -197,10 +197,14 @@ router.get('/:id', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asy
         switch (_context3.prev = _context3.next) {
           case 0:
             id = req.params.id;
-            user = (0,_Models_users__WEBPACK_IMPORTED_MODULE_3__.getById)(id);
-            res.send("User id: ".concat(user));
+            _context3.next = 3;
+            return _Models_users__WEBPACK_IMPORTED_MODULE_3__.getById(id);
 
           case 3:
+            user = _context3.sent;
+            res.send("User id: ".concat(user.mail));
+
+          case 5:
           case "end":
             return _context3.stop();
         }

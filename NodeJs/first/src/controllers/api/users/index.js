@@ -30,9 +30,9 @@ router.get('/', asyncHandler(async (req, res) => {
 router.get('/:id', asyncHandler(async (req, res) => {
   const { params: { id } } = req;
 
-  const user = getById(id);
+  const user = await UsersModel.getById(id);
 
-  res.send(`User id: ${user}`);
+  res.send(`User id: ${user.mail}`);
 }));
 
 //Create
