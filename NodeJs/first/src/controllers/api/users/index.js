@@ -30,10 +30,17 @@ router.get('/', asyncHandler(async (req, res) => {
 router.get('/:id', asyncHandler(async (req, res) => {
   const { params: { id } } = req;
 
-  const user = await UsersModel.getById(id);
+  //const user = await UsersModel.getById(id);
 
-  res.send(`User id: ${user.mail}`);
+  //res.send(user);
+
+
+  /*await UsersModel.remove(id);
+  res.send(`User id: ${id} deleted`);*/
 }));
+
+//create url
+
 
 //Create
 router.post("/", asyncHandler(async (req, res) => {
