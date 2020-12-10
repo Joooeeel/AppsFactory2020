@@ -40,6 +40,25 @@ router.get('/:id', asyncHandler(async (req, res) => {
 }));
 
 //create url
+/*router.get('/:mail/:pass', asyncHandler(async (req, res) => {
+  const { params: { mail, pass } } = req;
+
+  await UsersModel.create(mail, pass);
+  res.send('Usuario creado con exito');
+}));*/
+
+//Update con url
+router.get('/:id/:ml/:pass', asyncHandler(async (req, res) => {
+  const { params: { id, ml, pass } } = req;
+
+  const data = {
+    mail: ml,
+    password: pass
+  };
+
+  await UsersModel.update(id, data);
+  res.send('Usuario actualizado');
+}));
 
 
 //Create
