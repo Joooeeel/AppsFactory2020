@@ -337,16 +337,16 @@ router.get('/', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncH
   };
 }())); // GET BY ID
 
-router.get('/:userId', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncHandler)( /*#__PURE__*/function () {
+router.get('/:id', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncHandler)( /*#__PURE__*/function () {
   var _ref2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(req, res) {
-    var userId, data;
+    var id, data;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            userId = req.params.userId;
+            id = req.params.id;
             _context2.next = 3;
-            return _Models_users__WEBPACK_IMPORTED_MODULE_3__.getById(userId);
+            return _Models_users__WEBPACK_IMPORTED_MODULE_3__.getById(id);
 
           case 3:
             data = _context2.sent;
@@ -367,15 +367,15 @@ router.get('/:userId', (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__
 
 router.post("/", (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncHandler)( /*#__PURE__*/function () {
   var _ref3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(req, res) {
-    var _req$body, mail, pass;
+    var _req$body, username, alta;
 
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
-            _req$body = req.body, mail = _req$body.mail, pass = _req$body.pass;
+            _req$body = req.body, username = _req$body.username, alta = _req$body.alta;
             _context3.next = 3;
-            return _Models_users__WEBPACK_IMPORTED_MODULE_3__.create(mail, pass);
+            return _Models_users__WEBPACK_IMPORTED_MODULE_3__.create(username, alta);
 
           case 3:
             res.send('Usuario creado con éxito');
@@ -393,7 +393,7 @@ router.post("/", (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.async
   };
 }())); // DELETE
 
-router["delete"]("/:id", _Middlwares_restricted_access__WEBPACK_IMPORTED_MODULE_5__.default, (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncHandler)( /*#__PURE__*/function () {
+router["delete"]("/:id", (0,_Middlwares_error_handler__WEBPACK_IMPORTED_MODULE_4__.asyncHandler)( /*#__PURE__*/function () {
   var _ref4 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4(req, res) {
     var id;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
@@ -599,10 +599,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _schema__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schema */ "./src/models/users/schema.js");
 
-var create = function create(mail, password) {
+var create = function create(username, alta) {
   return _schema__WEBPACK_IMPORTED_MODULE_0__.default.create({
-    mail: mail,
-    password: password
+    username: username,
+    alta: alta
   });
 };
 var update = function update(id, data) {
@@ -619,11 +619,11 @@ var remove = function remove(id) {
     }
   });
 };
-var getByEmailAndPassword = function getByEmailAndPassword(mail, password) {
+var getByEmailAndPassword = function getByEmailAndPassword(username, alta) {
   return _schema__WEBPACK_IMPORTED_MODULE_0__.default.findOne({
     where: {
-      mail: mail,
-      password: password
+      username: username,
+      alta: alta
     }
   });
 };
@@ -658,8 +658,7 @@ var _require = __webpack_require__(/*! sequelize */ "sequelize"),
 
 var User = _application_database__WEBPACK_IMPORTED_MODULE_0__.db.define('user', {
   username: DataTypes.STRING,
-  password: DataTypes.STRING,
-  mail: DataTypes.STRING
+  alta: DataTypes.DATE
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (User);
 

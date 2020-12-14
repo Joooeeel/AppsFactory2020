@@ -12,21 +12,21 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 // GET BY ID
-router.get('/:userId', asyncHandler(async (req, res) => {
-  const { params: { userId } } = req;
-  const data = await UsersModel.getById(userId);
+router.get('/:id', asyncHandler(async (req, res) => {
+  const { params: { id } } = req;
+  const data = await UsersModel.getById(id);
   res.send(data);
 }));
 
 // CREATE
 router.post("/", asyncHandler(async (req, res) => {
-  const { body: { mail, pass } } = req;
-  await UsersModel.create(mail, pass)
+  const { body: { username, alta } } = req;
+  await UsersModel.create(username, alta)
   res.send('Usuario creado con éxito');
 }));
 
 // DELETE
-router.delete("/:id", restrictedAccess, asyncHandler(async (req, res) => {
+router.delete("/:id", asyncHandler(async (req, res) => {
   const { params: { id } } = req;
   await UsersModel.remove(id);
   res.send(`User id: ${id} deleted`);

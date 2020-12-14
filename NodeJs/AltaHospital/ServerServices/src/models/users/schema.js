@@ -3,8 +3,7 @@ const { DataTypes } = require('sequelize');
 
 const User = db.define('user', {
 	username: DataTypes.STRING,
-	password: DataTypes.STRING,
-	mail: DataTypes.STRING,
+	alta: DataTypes.DATE,
 });
 
 export default User;
